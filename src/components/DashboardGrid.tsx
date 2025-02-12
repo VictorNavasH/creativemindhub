@@ -25,25 +25,25 @@ const tools = [
     title: "Análisis y Métricas",
     icon: <BarChart3 className="w-full h-full" />,
     description: "Google Analytics, Meta Business y más",
-    bgColor: "#E8EDF3"
+    bgColor: "#FFFAF3"
   },
   {
     title: "Redes Sociales",
     icon: <Share2 className="w-full h-full" />,
     description: "Gestión unificada de redes sociales",
-    bgColor: "#E8EDF3"
+    bgColor: "#FFFAF3"
   },
   {
     title: "CRM",
     icon: <Users className="w-full h-full" />,
     description: "Zoho CRM y gestión de clientes",
-    bgColor: "#E8EDF3"
+    bgColor: "#FFFAF3"
   },
   {
     title: "Diseño Creativo",
     icon: <PenTool className="w-full h-full" />,
     description: "Canva, Envato Elements y recursos creativos",
-    bgColor: "#E8EDF3"
+    bgColor: "#FFFAF3"
   },
   {
     title: "IA Generativa",
