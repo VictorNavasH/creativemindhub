@@ -4,7 +4,7 @@ import { DashboardGrid } from "@/components/DashboardGrid";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, Globe } from "lucide-react";
 
 const Index = () => {
-  const zohoSocialUrl = "https://social.zoho.eu/social/nuasmartrestaurant/200856000000013017/Home.do?isAccessRequested=true#home";
+  console.log("Index component rendering"); // Añadido para debug
   
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fdfcfb] to-[#FFDEE2]/40">
@@ -16,11 +16,11 @@ const Index = () => {
           className="text-center mb-8"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-3">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)] filter-none">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
               Smart Marketing Hub
             </span>
           </h1>
-          <p className="text-sm md:text-base text-gray-700 max-w-2xl mx-auto mb-8 font-medium">
+          <p className="text-sm md:text-base text-gray-700 max-w-2xl mx-auto mb-8">
             Portal creativo de innovación para estrategias de marketing disruptivas
           </p>
           
