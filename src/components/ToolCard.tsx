@@ -16,11 +16,11 @@ export const ToolCard = ({ title, icon, description, onClick, bgColor = "#ffffff
   return (
     <motion.div
       whileHover={{ 
-        scale: 1.05,
+        scale: 1.1,
         z: 50,
-        transition: { duration: 0.2 }
+        transition: { duration: 0.3 }
       }}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.95 }}
       className="rounded-xl p-4 shadow-xl hover:shadow-2xl transition-all duration-300 h-[140px] flex flex-col justify-between cursor-pointer backdrop-blur-sm"
       style={{ backgroundColor: bgColor }}
       onClick={onClick}
