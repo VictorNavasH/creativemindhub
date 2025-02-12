@@ -33,7 +33,7 @@ export const platformTools: Tool[] = [
     link: "https://app.opinas.es/"
   },
   {
-    title: "IA Voz/Música",
+    title: "IA Voz / Música",
     icon: <Mic className="w-full h-full" />,
     description: "Asistente de voz inteligente",
     bgColor: "#E0FCFF",
