@@ -21,10 +21,10 @@ export const tools: Tool[] = [
   workspaceTools[2], // Google Workplace
   workspaceTools[3], // Correo Electrónico
   marketingTools[4], // Marketing Dirigido
-  workspaceTools[1], // IA
+  platformTools[3], // App Marketing
   analyticsTools[2], // SEO Global
   marketingTools[3], // Marketing Pro
-  platformTools[3], // App Marketing
+  workspaceTools[1], // IA
   creativeTools[0], // E-commerce
   marketingTools[6], // Email Pro
   analyticsTools[1], // Analytics Pro
