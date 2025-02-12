@@ -13,7 +13,7 @@ export const ToolCard = ({ title, icon, description, onClick }: ToolCardProps) =
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="glass-card rounded-xl p-6 hover-card relative overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-r before:from-purple-400/20 before:via-pink-500/20 before:to-purple-600/20 before:blur-xl before:transform before:transition-all before:duration-1000 hover:before:scale-150"
+      className="bg-black/90 rounded-xl p-6 hover-card shadow-lg shadow-black/50 border border-white/10"
       onClick={onClick}
     >
       <div className="flex items-center gap-4 mb-3">
