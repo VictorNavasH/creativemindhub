@@ -13,10 +13,10 @@ const Index = () => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-            CreativeMindHub
+            Smart Marketing Hub
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Tu portal centralizado para marketing digital innovador. Accede a todas tus herramientas y recursos en un solo lugar.
+            Bienvenid@ al portal de innovación para estrategias de marketing disruptivas.
           </p>
         </motion.div>
         <DashboardGrid />
