@@ -4,6 +4,8 @@ import { DashboardGrid } from "@/components/DashboardGrid";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const Index = () => {
+  const zohoSocialUrl = "https://www.zoho.com/social/";
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fdfcfb] to-[#FFDEE2]/40">
       <div className="container mx-auto px-4 pt-16 pb-12">
@@ -24,7 +26,9 @@ const Index = () => {
           
           <div className="flex justify-center gap-6 items-center mb-8">
             <motion.a
-              href="#"
+              href={zohoSocialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="text-gray-500 hover:text-pink-500 transition-colors"
@@ -32,7 +36,9 @@ const Index = () => {
               <Facebook size={24} />
             </motion.a>
             <motion.a
-              href="#"
+              href={zohoSocialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="text-gray-500 hover:text-pink-500 transition-colors"
@@ -40,7 +46,9 @@ const Index = () => {
               <Instagram size={24} />
             </motion.a>
             <motion.a
-              href="#"
+              href={zohoSocialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="text-gray-500 hover:text-pink-500 transition-colors"
@@ -48,7 +56,9 @@ const Index = () => {
               <Twitter size={24} />
             </motion.a>
             <motion.a
-              href="#"
+              href={zohoSocialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="text-gray-500 hover:text-pink-500 transition-colors"
@@ -56,7 +66,9 @@ const Index = () => {
               <Linkedin size={24} />
             </motion.a>
             <motion.a
-              href="#"
+              href={zohoSocialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="text-gray-500 hover:text-pink-500 transition-colors"
