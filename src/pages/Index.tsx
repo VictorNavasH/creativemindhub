@@ -4,10 +4,10 @@ import { DashboardGrid } from "@/components/DashboardGrid";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, Globe } from "lucide-react";
 
 const Index = () => {
-  console.log("Index component rendering"); // Añadido para debug
-  
+  console.log("Index rendering"); // Añadido para debug
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fdfcfb] to-[#FFDEE2]/40">
+    <div className="min-h-screen w-full bg-gradient-to-b from-[#fdfcfb] to-[#FFDEE2]/40">
       <div className="container mx-auto px-4 pt-16 pb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

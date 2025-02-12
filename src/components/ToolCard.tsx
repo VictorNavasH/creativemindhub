@@ -10,12 +10,14 @@ interface ToolCardProps {
   link?: string;
 }
 
-export const ToolCard = ({ title, icon, description, onClick, bgColor = "#E8EDF3", link = "#" }: ToolCardProps) => {
+export const ToolCard = ({ title, icon, description, onClick, bgColor = "#ffffff" }: ToolCardProps) => {
+  console.log("ToolCard rendering:", title); // Añadido para debug
+  
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="rounded-xl p-4 hover-card shadow-lg shadow-black/50 border border-white/10 h-[140px] flex flex-col justify-between cursor-pointer"
+      className="rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 h-[140px] flex flex-col justify-between cursor-pointer"
       style={{ backgroundColor: bgColor }}
       onClick={onClick}
     >

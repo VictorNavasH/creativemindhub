@@ -14,17 +14,17 @@ const container = {
 };
 
 export const DashboardGrid = () => {
-  console.log("Tools:", tools); // Añadido para debug
+  console.log("DashboardGrid rendering, tools:", tools); // Añadido para debug
   
   return (
     <motion.div
       variants={container}
       initial="hidden"
       animate="show"
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-16"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6"
     >
-      {tools.map((tool) => (
-        <AnimatedGridItem key={tool.title} tool={tool} />
+      {tools.map((tool, index) => (
+        <AnimatedGridItem key={`${tool.title}-${index}`} tool={tool} />
       ))}
     </motion.div>
   );
