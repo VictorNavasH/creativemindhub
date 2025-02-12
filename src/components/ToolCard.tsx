@@ -17,12 +17,12 @@ export const ToolCard = ({ title, icon, description, onClick }: ToolCardProps) =
       onClick={onClick}
     >
       <div className="flex items-center gap-4 mb-3">
-        <div className="text-primary/80 w-10 h-10">
+        <div className="text-[#364f6b] w-10 h-10">
           {icon}
         </div>
-        <h3 className="text-lg font-semibold text-primary">{title}</h3>
+        <h3 className="text-lg font-semibold text-[#364f6b]">{title}</h3>
       </div>
-      <p className="text-muted-foreground text-sm line-clamp-2">{description}</p>
+      <p className="text-[#364f6b] text-sm line-clamp-2">{description}</p>
     </motion.div>
   );
 };
