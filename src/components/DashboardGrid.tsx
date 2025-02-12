@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ToolCard } from "./ToolCard";
 import {
@@ -57,11 +58,11 @@ const tools = [
     link: "#"
   },
   {
-    title: "IA Generativa",
-    icon: <BrainCircuit className="w-full h-full" />,
-    description: "Herramientas de IA para texto, imagen y voz",
+    title: "Google Analytics",
+    icon: <BarChart3 className="w-full h-full" />,
+    description: "Análisis y métricas de tráfico web",
     bgColor: "#FFEDF5",
-    link: "#"
+    link: "https://analytics.google.com/"
   },
   {
     title: "Google My Business",
