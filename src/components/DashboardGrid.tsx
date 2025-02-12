@@ -49,7 +49,7 @@ const tools = [
     title: "IA Generativa",
     icon: <BrainCircuit className="w-full h-full" />,
     description: "Herramientas de IA para texto, imagen y voz",
-    bgColor: "#FDF7FF"
+    bgColor: "#E8EDF3"
   },
   {
     title: "Campañas",
