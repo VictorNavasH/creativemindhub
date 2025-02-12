@@ -49,50 +49,50 @@ const tools = [
     title: "IA Generativa",
     icon: <BrainCircuit className="w-full h-full" />,
     description: "Herramientas de IA para texto, imagen y voz",
-    bgColor: "#E0FCFF"
+    bgColor: "#FDF7FF"
   },
   {
     title: "Campañas",
     icon: <MessageSquare className="w-full h-full" />,
     description: "Zoho Campaigns y email marketing",
-    bgColor: "#E0FCFF"
+    bgColor: "#FDF7FF"
   },
   {
     title: "Contenido Visual",
     icon: <Camera className="w-full h-full" />,
     description: "Creación y edición de contenido multimedia",
-    bgColor: "#E0FCFF"
+    bgColor: "#FDF7FF"
   },
   {
     title: "Smart Marketing",
     icon: <Layout className="w-full h-full" />,
     description: "Fidelización y estrategias avanzadas",
-    bgColor: "#E0FCFF"
+    bgColor: "#FDF7FF"
   },
-  // Segunda fila con color FDF7FF
+  // Segunda fila
   {
     title: "App Marketing",
     icon: <Smartphone className="w-full h-full" />,
     description: "Estrategias para aplicaciones móviles",
-    bgColor: "#FDF7FF"
+    bgColor: "#E0FCFF"
   },
   {
     title: "SEO Global",
     icon: <Globe className="w-full h-full" />,
     description: "Optimización para búsquedas internacionales",
-    bgColor: "#FDF7FF"
+    bgColor: "#E0FCFF"
   },
   {
     title: "Marketing Dirigido",
     icon: <Target className="w-full h-full" />,
     description: "Segmentación y targeting avanzado",
-    bgColor: "#FDF7FF"
+    bgColor: "#E0FCFF"
   },
   {
     title: "Marketing Ágil",
     icon: <Zap className="w-full h-full" />,
     description: "Metodologías ágiles en marketing",
-    bgColor: "#FDF7FF"
+    bgColor: "#E0FCFF"
   },
   // Tercera fila con color E5FFFB
   {
