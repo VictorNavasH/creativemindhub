@@ -5,13 +5,13 @@
  
 @layer base {
   :root {
-    --background: 240 24% 24%;
+    --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     
-    --card: 240 24% 24%;
+    --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
     
-    --popover: 240 24% 24%;
+    --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
     
     --primary: 0 0% 98%;
@@ -58,8 +58,8 @@
 .animated-grad {
   background: linear-gradient(
     45deg,
-    rgba(47, 47, 76, 1) 0%,
-    rgba(47, 47, 76, 0.95) 100%
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
   );
   background-size: 200% 200%;
   animation: gradientMove 8s ease infinite;
