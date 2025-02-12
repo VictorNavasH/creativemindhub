@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   BarChart3,
@@ -101,11 +100,32 @@ export const tools = [
     link: "#"
   },
   {
-    title: "Marketing Ágil",
-    icon: <Zap className="w-full h-full" />,
-    description: "Metodologías ágiles en marketing",
+    title: "Zoho Workplace",
+    icon: <Cloud className="w-full h-full" />,
+    description: "Espacio de trabajo colaborativo en la nube",
+    bgColor: "#E5FFFB",
+    link: "https://workplace.zoho.eu/#dashboard/"
+  },
+  {
+    title: "Google Workplace",
+    icon: <Globe className="w-full h-full" />,
+    description: "Suite de herramientas de Google para empresas",
     bgColor: "#E0FCFF",
-    link: "#"
+    link: "https://workspace.google.com/"
+  },
+  {
+    title: "Correo Electrónico",
+    icon: <Mail className="w-full h-full" />,
+    description: "Acceso al correo electrónico corporativo",
+    bgColor: "#E0FCFF",
+    link: "https://mail.google.com/"
+  },
+  {
+    title: "Notion",
+    icon: <Layout className="w-full h-full" />,
+    description: "Espacio de trabajo y documentación",
+    bgColor: "#E0FCFF",
+    link: "https://www.notion.so/"
   },
   {
     title: "E-commerce",
