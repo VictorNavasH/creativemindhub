@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ToolCard } from "./ToolCard";
 import {
@@ -76,7 +75,7 @@ const tools = [
     icon: <Layout className="w-full h-full" />,
     description: "Acceso a WordPress para edición web",
     bgColor: "#FDF7FF",
-    link: "https://wp-admin.comeback.es/wp-admin/"
+    link: "https://nuasmartrestaurant.com/wp-login.php?redirect_to=https%3A%2F%2Fnuasmartrestaurant.com%2Fwp-admin%2Fadmin.php%3Fpage%3Drtb-bookings%26status%3Dpending&reauth=1"
   },
   {
     title: "App Marketing",
