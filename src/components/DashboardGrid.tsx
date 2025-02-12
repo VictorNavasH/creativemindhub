@@ -153,4 +153,16 @@ export const DashboardGrid = () => {
     >
       {tools.map((tool, index) => (
         <motion.div key={tool.title} variants={item}>
-          
+          <ToolCard
+            {...tool}
+            onClick={() => {
+              if (tool.link !== "#") {
+                window.open(tool.link, "_blank", "noopener noreferrer");
+              }
+            }}
+          />
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+};
