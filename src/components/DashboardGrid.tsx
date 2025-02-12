@@ -19,7 +19,11 @@ import {
   PieChart,
   Fingerprint,
   CreditCard,
-  Star
+  Star,
+  Palette,
+  FolderOpen,
+  Cloud,
+  Image
 } from "lucide-react";
 
 const tools = [
@@ -112,28 +116,56 @@ const tools = [
     icon: <ShoppingCart className="w-full h-full" />,
     description: "Estrategias para comercio electrónico",
     bgColor: "#E5FFFB",
-    link: "#"
+    link: "https://www.canva.com/"
   },
   {
     title: "Email Pro",
     icon: <Mail className="w-full h-full" />,
     description: "Marketing por correo avanzado",
     bgColor: "#E5FFFB",
-    link: "#"
+    link: "https://elements.envato.com/"
   },
   {
     title: "Analytics Pro",
     icon: <PieChart className="w-full h-full" />,
     description: "Análisis avanzado de datos",
     bgColor: "#E5FFFB",
-    link: "#"
+    link: "https://drive.zoho.eu/"
   },
   {
     title: "ID Marketing",
     icon: <Fingerprint className="w-full h-full" />,
     description: "Marketing personalizado por identidad",
     bgColor: "#E5FFFB",
-    link: "#"
+    link: "https://drive.google.com/drive/folders/your-resources-folder"
+  },
+  {
+    title: "Canva",
+    icon: <Palette className="w-full h-full" />,
+    description: "Diseño gráfico y creación de contenido",
+    bgColor: "#FFF5F5",
+    link: "https://www.canva.com/"
+  },
+  {
+    title: "Envato Elements",
+    icon: <Image className="w-full h-full" />,
+    description: "Recursos creativos y plantillas",
+    bgColor: "#FFF5F5",
+    link: "https://elements.envato.com/"
+  },
+  {
+    title: "Recursos",
+    icon: <FolderOpen className="w-full h-full" />,
+    description: "Carpeta de recursos compartidos",
+    bgColor: "#FFF5F5",
+    link: "https://drive.google.com/drive/folders/your-resources-folder"
+  },
+  {
+    title: "Zoho Drive",
+    icon: <Cloud className="w-full h-full" />,
+    description: "Almacenamiento y gestión de archivos",
+    bgColor: "#FFF5F5",
+    link: "https://drive.zoho.eu/"
   }
 ];
 
