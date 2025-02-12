@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ToolCard } from "./ToolCard";
 import {
@@ -6,7 +7,7 @@ import {
   Camera,
   Layout,
   MessageSquare,
-  PenTool,
+  Megaphone,
   Share2,
   Users,
   Smartphone,
@@ -43,7 +44,7 @@ const tools = [
   },
   {
     title: "Campañas",
-    icon: <PenTool className="w-full h-full" />,
+    icon: <Megaphone className="w-full h-full" />,
     description: "Zoho Campaigns y email marketing",
     bgColor: "#FFFAF3",
     link: "#"
