@@ -154,7 +154,7 @@ export const tools = [
     icon: <FolderOpen className="w-full h-full" />,
     description: "Carpeta de recursos compartidos",
     bgColor: "#FBEBFF",
-    link: "https://drive.google.com/drive/folders/your-resources-folder"
+    link: "https://drive.google.com/drive/u/0/folders/0ANUAQgIMdmCSUk9PVA"
   },
   {
     title: "Zoho Drive",
