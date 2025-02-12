@@ -23,17 +23,22 @@ const data = [
     title: 'Notion',
     icon: <ScrollText className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
     href: 'https://notion.com',
+  },
+  {
+    title: 'Mail',
+    icon: <Mail className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+    href: '/mail',
   }
 ];
 
 export function DockNavigation() {
   return (
-    <div className='fixed bottom-2 left-1/2 max-w-full -translate-x-1/2 z-50'>
-      <Dock className='items-end pb-3 [&>div]:!bg-[#364f6b]'>
+    <div className='fixed top-4 left-1/2 max-w-full -translate-x-1/2 z-50'>
+      <Dock className='items-end pb-3 [&>div]:bg-transparent'>
         {data.map((item, idx) => (
           <Link key={idx} to={item.href}>
             <DockItem
-              className='aspect-square rounded-full bg-[#364f6b]/80'
+              className='aspect-square rounded-full bg-[#364f6b]/80 mx-2'
             >
               <DockLabel>{item.title}</DockLabel>
               <DockIcon>{item.icon}</DockIcon>
