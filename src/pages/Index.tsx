@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { DashboardGrid } from "@/components/DashboardGrid";
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube, Globe } from "lucide-react";
 
 const Index = () => {
   const zohoSocialUrl = "https://social.zoho.eu/social/nuasmartrestaurant/200856000000013017/Home.do?isAccessRequested=true#home";
@@ -25,6 +25,16 @@ const Index = () => {
           </p>
           
           <div className="flex justify-center gap-6 items-center mb-8">
+            <motion.a
+              href="https://nuasmartrestaurant.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-gray-500 hover:text-pink-500 transition-colors"
+            >
+              <Globe size={24} />
+            </motion.a>
             <motion.a
               href="https://www.facebook.com"
               target="_blank"
