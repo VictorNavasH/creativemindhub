@@ -44,7 +44,7 @@ const data = [
 export function DockNavigation() {
   return (
     <div className='absolute top-2 left-1/2 max-w-full -translate-x-1/2'>
-      <div className="bg-white px-6 py-3 rounded-full">
+      <div className="bg-[#e8edf3] px-6 py-3 rounded-full">
         <Dock className='items-start'>
           {data.map((item, idx) => (
             <DockItem
