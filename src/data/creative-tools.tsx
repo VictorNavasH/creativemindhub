@@ -10,9 +10,9 @@ import {
 
 export const creativeTools: Tool[] = [
   {
-    title: "Restoo",
+    title: "Reservas",
     icon: <ShoppingCart className="w-full h-full" />,
-    description: "Acceso al software de gestión Restoo",
+    description: "Acceso a la app de reservas Restoo",
     bgColor: "#E5FFFB",
     link: "https://app.restoo.es/login"
   },
