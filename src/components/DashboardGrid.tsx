@@ -14,6 +14,8 @@ const container = {
 };
 
 export const DashboardGrid = () => {
+  console.log("Tools:", tools); // Añadido para debug
+  
   return (
     <motion.div
       variants={container}
