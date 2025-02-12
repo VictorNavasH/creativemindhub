@@ -18,7 +18,7 @@ export const workspaceTools: Tool[] = [
     title: "Zoho Workplace",
     icon: <Cloud className="w-full h-full" />,
     description: "Espacio de trabajo colaborativo en la nube",
-    bgColor: "#E0FCFF",
+    bgColor: "#FFF3E5",
     link: "https://workplace.zoho.eu/#dashboard/"
   },
   {
@@ -32,14 +32,14 @@ export const workspaceTools: Tool[] = [
     title: "Google Workplace",
     icon: <Globe className="w-full h-full" />,
     description: "Suite de herramientas de Google para empresas",
-    bgColor: "#E0FCFF",
+    bgColor: "#FFF3E5",
     link: "https://workspace.google.com/"
   },
   {
     title: "Correo Electrónico",
     icon: <Mail className="w-full h-full" />,
     description: "Acceso al correo electrónico corporativo",
-    bgColor: "#E0FCFF",
+    bgColor: "#FFF3E5",
     link: "https://mail.google.com/"
   },
   {
