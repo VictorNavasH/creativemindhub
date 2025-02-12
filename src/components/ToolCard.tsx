@@ -17,8 +17,7 @@ export const ToolCard = ({ title, icon, description, onClick, bgColor = "#ffffff
     <motion.div
       whileHover={{ 
         scale: 1.05,
-        rotate: 1,
-        y: -5,
+        z: 50,
         transition: { duration: 0.2 }
       }}
       whileTap={{ scale: 0.98 }}
