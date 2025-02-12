@@ -160,7 +160,7 @@ export const tools = [
     title: "Zoho Drive",
     icon: <Cloud className="w-full h-full" />,
     description: "Almacenamiento y gestión de archivos",
-    bgColor: "#FFF5F5",
+    bgColor: "#FBEBFF",
     link: "https://drive.zoho.eu/"
   }
 ] as const;
