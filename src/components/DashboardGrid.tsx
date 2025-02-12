@@ -52,9 +52,9 @@ const tools = [
     link: "https://campaigns.zoho.eu/campaigns/org20100141836/home.do#dashboard"
   },
   {
-    title: "Opinas",
+    title: "Reviews",
     icon: <MessageSquare className="w-full h-full" />,
-    description: "Gestión de reseñas y opiniones",
+    description: "Gestión de reseñas y opiniones desde el portal Opinas",
     bgColor: "#FFFAF3",
     link: "https://app.opinas.es/"
   },
