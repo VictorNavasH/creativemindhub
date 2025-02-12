@@ -23,9 +23,9 @@ import {
 
 const tools = [
   {
-    title: "Análisis y Métricas",
-    icon: <BarChart3 className="w-full h-full" />,
-    description: "Google Analytics, Meta Business y más",
+    title: "Smart Fidelity Card",
+    icon: <CreditCard className="w-full h-full" />,
+    description: "Programa de fidelización digital",
     bgColor: "#FFFAF3",
     link: "#"
   },
@@ -51,9 +51,9 @@ const tools = [
     link: "https://campaigns.zoho.eu/campaigns/org20100141836/home.do#dashboard"
   },
   {
-    title: "Smart Fidelity Card",
-    icon: <CreditCard className="w-full h-full" />,
-    description: "Programa de fidelización digital",
+    title: "Análisis y Métricas",
+    icon: <BarChart3 className="w-full h-full" />,
+    description: "Google Analytics, Meta Business y más",
     bgColor: "#FFFAF3",
     link: "#"
   },
