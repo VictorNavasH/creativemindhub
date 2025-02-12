@@ -18,7 +18,7 @@ const Index = () => {
               Smart Marketing Hub
             </span>
           </h1>
-          <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-8 font-medium">
+          <p className="text-sm md:text-base text-gray-700 max-w-2xl mx-auto mb-8 font-medium">
             Portal creativo de innovación para estrategias de marketing disruptivas
           </p>
           
