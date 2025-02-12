@@ -17,7 +17,8 @@ import {
   ShoppingCart,
   Mail,
   PieChart,
-  Fingerprint
+  Fingerprint,
+  CreditCard
 } from "lucide-react";
 
 const tools = [
@@ -48,6 +49,13 @@ const tools = [
     description: "Zoho Campaigns y email marketing",
     bgColor: "#FFFAF3",
     link: "https://campaigns.zoho.eu/campaigns/org20100141836/home.do#dashboard"
+  },
+  {
+    title: "Smart Fidelity Card",
+    icon: <CreditCard className="w-full h-full" />,
+    description: "Programa de fidelización digital",
+    bgColor: "#FFFAF3",
+    link: "#"
   },
   {
     title: "IA Generativa",
