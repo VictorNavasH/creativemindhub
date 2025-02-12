@@ -12,8 +12,11 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-            Smart Marketing Hub
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
+              Smart Marketing
+            </span>{" "}
+            <span className="text-primary">Hub</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Bienvenid@ al portal de innovación para estrategias de marketing disruptivas.
