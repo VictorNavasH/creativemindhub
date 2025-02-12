@@ -96,7 +96,7 @@ export default {
         "fade-in": "fade-in 0.3s ease-out",
       },
       backgroundImage: {
-        'gradient-custom': 'linear-gradient(to bottom, #02b1c4, #02b1c4)',
+        'gradient-custom': 'linear-gradient(to bottom, #e8edf3, #e8edf3)',
       }
     },
   },
