@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ToolCard } from "./ToolCard";
 import {
@@ -47,7 +46,7 @@ const tools = [
     icon: <Megaphone className="w-full h-full" />,
     description: "Zoho Campaigns y email marketing",
     bgColor: "#FFFAF3",
-    link: "#"
+    link: "https://campaigns.zoho.eu/campaigns/org20100141836/home.do#dashboard"
   },
   {
     title: "IA Generativa",
