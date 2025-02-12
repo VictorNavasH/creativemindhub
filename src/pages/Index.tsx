@@ -27,7 +27,7 @@ const Index = () => {
               href="#"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-400 hover:text-pink-400 transition-colors"
             >
               <Facebook size={24} />
             </motion.a>
@@ -35,7 +35,7 @@ const Index = () => {
               href="#"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-400 hover:text-pink-400 transition-colors"
             >
               <Instagram size={24} />
             </motion.a>
@@ -43,7 +43,7 @@ const Index = () => {
               href="#"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-400 hover:text-pink-400 transition-colors"
             >
               <Twitter size={24} />
             </motion.a>
@@ -51,7 +51,7 @@ const Index = () => {
               href="#"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-400 hover:text-pink-400 transition-colors"
             >
               <Linkedin size={24} />
             </motion.a>
@@ -59,7 +59,7 @@ const Index = () => {
               href="#"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-400 hover:text-pink-400 transition-colors"
             >
               <Youtube size={24} />
             </motion.a>
