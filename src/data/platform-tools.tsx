@@ -7,7 +7,7 @@ import {
   Globe,
   CreditCard,
   MessageSquare,
-  Smartphone
+  Mic
 } from "lucide-react";
 
 export const platformTools: Tool[] = [
@@ -33,9 +33,9 @@ export const platformTools: Tool[] = [
     link: "https://app.opinas.es/"
   },
   {
-    title: "App Marketing",
-    icon: <Smartphone className="w-full h-full" />,
-    description: "Estrategias para aplicaciones móviles",
+    title: "IA Voz",
+    icon: <Mic className="w-full h-full" />,
+    description: "Asistente de voz inteligente",
     bgColor: "#E0FCFF",
     link: "#"
   },
