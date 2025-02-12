@@ -97,14 +97,14 @@ export default {
   },
   plugins: [
     require("tailwindcss-animate"),
-    plugin(function({ addBase, theme }) {
-      let colors = flattenColorPalette(theme("colors"));
-      let newVars = Object.fromEntries(
+    plugin(({ addBase, theme }) => {
+      const colors = flattenColorPalette(theme("colors") ?? {});
+      const newVars = Object.fromEntries(
         Object.entries(colors).map(([key, val]) => [`--${key}`, val])
       );
       addBase({
         ":root": newVars,
       });
-    })
+    }),
   ],
 } satisfies Config;
