@@ -143,7 +143,7 @@ const tools = [
     title: "Canva",
     icon: <Palette className="w-full h-full" />,
     description: "Diseño gráfico y creación de contenido",
-    bgColor: "#FFF5F5",
+    bgColor: "#FFEDF5",
     link: "https://www.canva.com/"
   },
   {
