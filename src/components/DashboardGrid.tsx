@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ToolCard } from "./ToolCard";
 import {
@@ -69,30 +68,30 @@ const tools = [
     description: "Fidelización y estrategias avanzadas",
     bgColor: "#E8EDF3"
   },
-  // Segunda fila con color E0FCFF
+  // Segunda fila con color FDF7FF
   {
     title: "App Marketing",
     icon: <Smartphone className="w-full h-full" />,
     description: "Estrategias para aplicaciones móviles",
-    bgColor: "#E0FCFF"
+    bgColor: "#FDF7FF"
   },
   {
     title: "SEO Global",
     icon: <Globe className="w-full h-full" />,
     description: "Optimización para búsquedas internacionales",
-    bgColor: "#E0FCFF"
+    bgColor: "#FDF7FF"
   },
   {
     title: "Marketing Dirigido",
     icon: <Target className="w-full h-full" />,
     description: "Segmentación y targeting avanzado",
-    bgColor: "#E0FCFF"
+    bgColor: "#FDF7FF"
   },
   {
     title: "Marketing Ágil",
     icon: <Zap className="w-full h-full" />,
     description: "Metodologías ágiles en marketing",
-    bgColor: "#E0FCFF"
+    bgColor: "#FDF7FF"
   },
   // Tercera fila con color E5FFFB
   {
