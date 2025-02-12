@@ -4,7 +4,7 @@ import { DashboardGrid } from "@/components/DashboardGrid";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const Index = () => {
-  const zohoSocialUrl = "https://www.zoho.com/social/";
+  const zohoSocialUrl = "https://social.zoho.eu/social/nuasmartrestaurant/200856000000013017/Home.do?isAccessRequested=true#home";
   
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fdfcfb] to-[#FFDEE2]/40">
@@ -26,7 +26,7 @@ const Index = () => {
           
           <div className="flex justify-center gap-6 items-center mb-8">
             <motion.a
-              href={zohoSocialUrl}
+              href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -36,7 +36,7 @@ const Index = () => {
               <Facebook size={24} />
             </motion.a>
             <motion.a
-              href={zohoSocialUrl}
+              href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -46,7 +46,7 @@ const Index = () => {
               <Instagram size={24} />
             </motion.a>
             <motion.a
-              href={zohoSocialUrl}
+              href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -56,7 +56,7 @@ const Index = () => {
               <Twitter size={24} />
             </motion.a>
             <motion.a
-              href={zohoSocialUrl}
+              href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -66,7 +66,7 @@ const Index = () => {
               <Linkedin size={24} />
             </motion.a>
             <motion.a
-              href={zohoSocialUrl}
+              href="https://www.youtube.com"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
