@@ -41,9 +41,9 @@ export const marketingTools: Tool[] = [
     link: "#"
   },
   {
-    title: "Marketing Dirigido",
-    icon: <Target className="w-full h-full" />,
-    description: "Segmentación y targeting avanzado",
+    title: "IA",
+    icon: <Brain className="w-full h-full" />,
+    description: "Inteligencia Artificial y automatización",
     bgColor: "#E0FCFF",
     link: "#"
   },
