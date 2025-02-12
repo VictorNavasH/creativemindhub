@@ -14,8 +14,13 @@ const container = {
 };
 
 export const DashboardGrid = () => {
-  console.log("DashboardGrid rendering, tools:", tools); // Añadido para debug
+  console.log("DashboardGrid rendering, tools:", tools); // Para debug
   
+  if (!tools || tools.length === 0) {
+    console.error("No tools found!");
+    return null;
+  }
+
   return (
     <motion.div
       variants={container}

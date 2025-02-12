@@ -6,7 +6,7 @@ import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
 import { creativeTools } from "./creative-tools";
 
-// Volvemos al orden original combinando las herramientas
+// Combinamos las herramientas en el orden deseado
 export const tools: Tool[] = [
   platformTools[0], // Smart Fidelity Card
   marketingTools[0], // Redes Sociales
@@ -26,11 +26,10 @@ export const tools: Tool[] = [
   marketingTools[3], // IA Video
   workspaceTools[1], // Smart Tables
   creativeTools[0], // Reservas
-  marketingTools[6], // Meta Business Suite
+  marketingTools[5], // Meta Business Suite
   analyticsTools[1], // Analytics Pro
   workspaceTools[5], // Zoho Drive
   creativeTools[1], // Canva
   creativeTools[2], // Envato Elements
   creativeTools[3], // Recursos
-] as const;
-
+];

@@ -6,8 +6,8 @@ import {
   Share2,
   Users,
   Video,
-  Mail,
-  Brain
+  Brain,
+  Globe
 } from "lucide-react";
 
 export const marketingTools: Tool[] = [
@@ -48,7 +48,7 @@ export const marketingTools: Tool[] = [
   },
   {
     title: "Meta Business Suite",
-    icon: <Mail className="w-full h-full" />,
+    icon: <Globe className="w-full h-full" />,
     description: "Gestión empresarial de Meta",
     bgColor: "#E5FFFB",
     link: "https://business.facebook.com/"
