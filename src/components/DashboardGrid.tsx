@@ -18,7 +18,8 @@ import {
   Mail,
   PieChart,
   Fingerprint,
-  CreditCard
+  CreditCard,
+  Star
 } from "lucide-react";
 
 const tools = [
@@ -51,11 +52,11 @@ const tools = [
     link: "https://campaigns.zoho.eu/campaigns/org20100141836/home.do#dashboard"
   },
   {
-    title: "Análisis y Métricas",
-    icon: <BarChart3 className="w-full h-full" />,
-    description: "Google Analytics, Meta Business y más",
+    title: "Opinas",
+    icon: <MessageSquare className="w-full h-full" />,
+    description: "Gestión de reseñas y opiniones",
     bgColor: "#FFFAF3",
-    link: "#"
+    link: "https://app.opinas.es/"
   },
   {
     title: "Google My Business",
