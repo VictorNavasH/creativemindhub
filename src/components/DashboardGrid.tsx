@@ -27,7 +27,7 @@ const tools = [
     icon: <CreditCard className="w-full h-full" />,
     description: "Programa de fidelización digital",
     bgColor: "#FFFAF3",
-    link: "#"
+    link: "https://comeback.es/"
   },
   {
     title: "Redes Sociales",
