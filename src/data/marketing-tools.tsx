@@ -6,7 +6,6 @@ import {
   Share2,
   Users,
   Video,
-  Fingerprint,
   Mail,
   Brain
 } from "lucide-react";
@@ -46,13 +45,6 @@ export const marketingTools: Tool[] = [
     description: "Inteligencia Artificial y automatización",
     bgColor: "#E0FCFF",
     link: "#"
-  },
-  {
-    title: "ID Marketing",
-    icon: <Fingerprint className="w-full h-full" />,
-    description: "Marketing personalizado por identidad",
-    bgColor: "#E5FFFB",
-    link: "https://drive.google.com/drive/folders/your-resources-folder"
   },
   {
     title: "Meta Business Suite",

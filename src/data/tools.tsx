@@ -20,17 +20,17 @@ export const tools: Tool[] = [
   workspaceTools[0], // Zoho Workplace
   workspaceTools[2], // Google Workplace
   workspaceTools[3], // Correo Electrónico
-  marketingTools[4], // Marketing Dirigido
-  platformTools[3], // App Marketing
-  analyticsTools[2], // SEO Global
-  marketingTools[3], // Marketing Pro
-  workspaceTools[1], // IA
-  creativeTools[0], // E-commerce
-  marketingTools[6], // Email Pro
+  marketingTools[4], // IA
+  platformTools[3], // IA Voz / Música
+  analyticsTools[2], // IA Imagen
+  marketingTools[3], // IA Video
+  workspaceTools[1], // Smart Tables
+  creativeTools[0], // Reservas
+  marketingTools[6], // Meta Business Suite
   analyticsTools[1], // Analytics Pro
-  marketingTools[5], // ID Marketing
+  workspaceTools[5], // Zoho Drive
   creativeTools[1], // Canva
   creativeTools[2], // Envato Elements
   creativeTools[3], // Recursos
-  workspaceTools[5], // Zoho Drive
 ] as const;
+
