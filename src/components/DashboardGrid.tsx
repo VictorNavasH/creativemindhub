@@ -64,11 +64,11 @@ const tools = [
     link: "#"
   },
   {
-    title: "Diseño Creativo",
-    icon: <MessageSquare className="w-full h-full" />,
-    description: "Canva, Envato Elements y recursos creativos",
+    title: "Google My Business",
+    icon: <Globe className="w-full h-full" />,
+    description: "Gestiona tu presencia en Google",
     bgColor: "#FDF7FF",
-    link: "#"
+    link: "https://business.google.com/dashboard"
   },
   {
     title: "Editor Web",
