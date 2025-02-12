@@ -10,11 +10,11 @@ import {
 
 export const creativeTools: Tool[] = [
   {
-    title: "E-commerce",
+    title: "Restoo",
     icon: <ShoppingCart className="w-full h-full" />,
-    description: "Estrategias para comercio electrónico",
+    description: "Acceso al software de gestión Restoo",
     bgColor: "#E5FFFB",
-    link: "https://www.canva.com/"
+    link: "https://app.restoo.es/login"
   },
   {
     title: "Canva",

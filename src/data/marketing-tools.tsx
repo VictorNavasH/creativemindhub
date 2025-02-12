@@ -55,10 +55,10 @@ export const marketingTools: Tool[] = [
     link: "https://drive.google.com/drive/folders/your-resources-folder"
   },
   {
-    title: "Email Pro",
+    title: "Meta Business Suite",
     icon: <Mail className="w-full h-full" />,
-    description: "Marketing por correo avanzado",
+    description: "Gestión empresarial de Meta",
     bgColor: "#E5FFFB",
-    link: "https://elements.envato.com/"
+    link: "https://business.facebook.com/"
   }
 ];

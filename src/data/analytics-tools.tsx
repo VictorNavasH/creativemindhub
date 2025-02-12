@@ -20,7 +20,7 @@ export const analyticsTools: Tool[] = [
     icon: <PieChart className="w-full h-full" />,
     description: "Análisis avanzado de datos",
     bgColor: "#E5FFFB",
-    link: "https://drive.zoho.eu/"
+    link: "https://analytics.zoho.com/"
   },
   {
     title: "SEO Global",
