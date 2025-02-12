@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   BarChart3,
@@ -9,7 +10,6 @@ import {
   Smartphone,
   Globe,
   Target,
-  Zap,
   ShoppingCart,
   Mail,
   PieChart,
@@ -82,13 +82,6 @@ export const tools = [
     title: "App Marketing",
     icon: <Smartphone className="w-full h-full" />,
     description: "Estrategias para aplicaciones móviles",
-    bgColor: "#E0FCFF",
-    link: "#"
-  },
-  {
-    title: "SEO Global",
-    icon: <Globe className="w-full h-full" />,
-    description: "Optimización para búsquedas internacionales",
     bgColor: "#E0FCFF",
     link: "#"
   },
