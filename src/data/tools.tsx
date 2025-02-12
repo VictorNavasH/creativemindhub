@@ -16,7 +16,7 @@ export const tools: Tool[] = [
   platformTools[4], // Google My Business
   analyticsTools[0], // Google Analytics
   platformTools[1], // Editor Web
-  platformTools[3], // App Marketing
+  workspaceTools[4], // Notion
   workspaceTools[0], // Zoho Workplace
   analyticsTools[2], // SEO Global
   workspaceTools[3], // Correo Electrónico
@@ -24,7 +24,7 @@ export const tools: Tool[] = [
   workspaceTools[1], // IA
   workspaceTools[2], // Google Workplace
   marketingTools[3], // Marketing Pro
-  workspaceTools[4], // Notion
+  platformTools[3], // App Marketing
   creativeTools[0], // E-commerce
   marketingTools[6], // Email Pro
   analyticsTools[1], // Analytics Pro
