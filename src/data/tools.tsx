@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   BarChart3,
@@ -19,7 +18,11 @@ import {
   Palette,
   FolderOpen,
   Cloud,
-  Image
+  Image,
+  Bot,
+  Notebook,
+  Paintbrush,
+  MailCheck
 } from "lucide-react";
 
 export const tools = [
@@ -162,5 +165,33 @@ export const tools = [
     description: "Almacenamiento y gestión de archivos",
     bgColor: "#FBEBFF",
     link: "https://drive.zoho.eu/"
+  },
+  {
+    title: "Acceso a Notion",
+    icon: <Notebook className="w-full h-full" />,
+    description: "Gestión de documentos y notas en Notion",
+    bgColor: "#FBEBFF",
+    link: "https://www.notion.so/"
+  },
+  {
+    title: "Acceso a Gmail",
+    icon: <MailCheck className="w-full h-full" />,
+    description: "Gestión de correo electrónico empresarial",
+    bgColor: "#FBEBFF",
+    link: "https://mail.google.com/"
+  },
+  {
+    title: "IA",
+    icon: <Bot className="w-full h-full" />,
+    description: "Herramientas de Inteligencia Artificial",
+    bgColor: "#FBEBFF",
+    link: "#"
+  },
+  {
+    title: "Kit de Marca",
+    icon: <Paintbrush className="w-full h-full" />,
+    description: "Recursos y guías de marca corporativa",
+    bgColor: "#FBEBFF",
+    link: "#"
   }
 ] as const;
