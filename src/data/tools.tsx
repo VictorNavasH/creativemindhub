@@ -19,11 +19,11 @@ export const tools: Tool[] = [
   platformTools[3], // App Marketing
   workspaceTools[0], // Zoho Workplace
   analyticsTools[2], // SEO Global
-  marketingTools[3], // Marketing Pro
+  workspaceTools[3], // Correo Electrónico
   marketingTools[4], // Marketing Dirigido
   workspaceTools[1], // IA
   workspaceTools[2], // Google Workplace
-  workspaceTools[3], // Correo Electrónico
+  marketingTools[3], // Marketing Pro
   workspaceTools[4], // Notion
   creativeTools[0], // E-commerce
   marketingTools[6], // Email Pro
