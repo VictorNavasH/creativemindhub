@@ -5,7 +5,7 @@ import {
   Cloud,
   Layout,
   Mail,
-  Brain,
+  Table,
   Globe,
   ShoppingCart,
   Palette,
@@ -23,7 +23,7 @@ export const workspaceTools: Tool[] = [
   },
   {
     title: "Smart Tables",
-    icon: <Brain className="w-full h-full" />,
+    icon: <Table className="w-full h-full" />,
     description: "Análisis y estadísticas en tiempo real",
     bgColor: "#E5FFFB",
     link: "https://app.powerbi.com/view?r=eyJrIjoiMTExODYwMTktMDE3NS00MzI5LWI2NTMtZjFhMmY1YjJkYjYzIiwidCI6ImIxNjFiM2I0LTU0MDYtNGE4Yy1iNDhmLTQ5ODdjNmI4YmQzOSIsImMiOjl9&pageName=ReportSection6ad7c2c3089c0894342c"
