@@ -72,11 +72,11 @@ const tools = [
     link: "#"
   },
   {
-    title: "Smart Marketing",
+    title: "Editor Web",
     icon: <Layout className="w-full h-full" />,
-    description: "Fidelización y estrategias avanzadas",
+    description: "Acceso a WordPress para edición web",
     bgColor: "#FDF7FF",
-    link: "#"
+    link: "https://wp-admin.comeback.es/wp-admin/"
   },
   {
     title: "App Marketing",
