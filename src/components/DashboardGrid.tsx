@@ -55,7 +55,7 @@ const tools = [
     title: "Reviews",
     icon: <MessageSquare className="w-full h-full" />,
     description: "Gestión de reseñas y opiniones desde el portal Opinas",
-    bgColor: "#FFFAF3",
+    bgColor: "#FFEDF5",
     link: "https://app.opinas.es/"
   },
   {
