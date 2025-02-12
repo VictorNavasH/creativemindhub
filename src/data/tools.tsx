@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   BarChart3,
@@ -107,7 +106,7 @@ export const tools = [
     link: "#"
   },
   {
-    title: "Zoho Workplace",
+    title: "IA",
     icon: <Cloud className="w-full h-full" />,
     description: "Espacio de trabajo colaborativo en la nube",
     bgColor: "#E5FFFB",
