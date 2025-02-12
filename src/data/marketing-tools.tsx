@@ -5,7 +5,7 @@ import {
   Megaphone,
   Share2,
   Users,
-  Target,
+  Video,
   Fingerprint,
   Mail,
   Brain
@@ -34,9 +34,9 @@ export const marketingTools: Tool[] = [
     link: "https://campaigns.zoho.eu/campaigns/org20100141836/home.do#dashboard"
   },
   {
-    title: "Marketing Pro",
-    icon: <Target className="w-full h-full" />,
-    description: "Marketing avanzado y estrategias",
+    title: "IA Video",
+    icon: <Video className="w-full h-full" />,
+    description: "Generación y edición de videos con IA",
     bgColor: "#E0FCFF",
     link: "#"
   },
