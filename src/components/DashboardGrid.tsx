@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ToolCard } from "./ToolCard";
 import {
@@ -43,9 +42,9 @@ const tools = [
     link: "https://crm.zoho.eu/crm/nuasmartrestaurant/tab/Home/begin"
   },
   {
-    title: "Diseño Creativo",
+    title: "Campañas",
     icon: <PenTool className="w-full h-full" />,
-    description: "Canva, Envato Elements y recursos creativos",
+    description: "Zoho Campaigns y email marketing",
     bgColor: "#FFFAF3",
     link: "#"
   },
@@ -57,16 +56,9 @@ const tools = [
     link: "#"
   },
   {
-    title: "Campañas",
+    title: "Diseño Creativo",
     icon: <MessageSquare className="w-full h-full" />,
-    description: "Zoho Campaigns y email marketing",
-    bgColor: "#FDF7FF",
-    link: "#"
-  },
-  {
-    title: "Contenido Visual",
-    icon: <Camera className="w-full h-full" />,
-    description: "Creación y edición de contenido multimedia",
+    description: "Canva, Envato Elements y recursos creativos",
     bgColor: "#FDF7FF",
     link: "#"
   },
@@ -77,7 +69,6 @@ const tools = [
     bgColor: "#FDF7FF",
     link: "#"
   },
-  // Segunda fila
   {
     title: "App Marketing",
     icon: <Smartphone className="w-full h-full" />,
@@ -106,7 +97,6 @@ const tools = [
     bgColor: "#E0FCFF",
     link: "#"
   },
-  // Tercera fila con color E5FFFB
   {
     title: "E-commerce",
     icon: <ShoppingCart className="w-full h-full" />,
