@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ToolCard } from "./ToolCard";
 import {
@@ -48,25 +49,25 @@ const tools = [
     title: "IA Generativa",
     icon: <BrainCircuit className="w-full h-full" />,
     description: "Herramientas de IA para texto, imagen y voz",
-    bgColor: "#E8EDF3"
+    bgColor: "#E0FCFF"
   },
   {
     title: "Campañas",
     icon: <MessageSquare className="w-full h-full" />,
     description: "Zoho Campaigns y email marketing",
-    bgColor: "#E8EDF3"
+    bgColor: "#E0FCFF"
   },
   {
     title: "Contenido Visual",
     icon: <Camera className="w-full h-full" />,
     description: "Creación y edición de contenido multimedia",
-    bgColor: "#E8EDF3"
+    bgColor: "#E0FCFF"
   },
   {
     title: "Smart Marketing",
     icon: <Layout className="w-full h-full" />,
     description: "Fidelización y estrategias avanzadas",
-    bgColor: "#E8EDF3"
+    bgColor: "#E0FCFF"
   },
   // Segunda fila con color FDF7FF
   {
