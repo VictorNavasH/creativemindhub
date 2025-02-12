@@ -2,11 +2,20 @@
 import { motion } from "framer-motion";
 import { DashboardGrid } from "@/components/DashboardGrid";
 import { TubelightNavbar } from "@/components/TubelightNavbar";
+import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background animated-grad">
+    <div className="min-h-screen bg-background">
       <TubelightNavbar />
+      <MovingBorderButton 
+        containerClassName="w-full h-full fixed inset-0 -z-10"
+        borderClassName="h-40 w-40 opacity-[0.3] bg-[radial-gradient(var(--primary)_40%,transparent_60%)]"
+        duration={10000}
+        className="pointer-events-none border-none bg-transparent"
+      >
+        <div />
+      </MovingBorderButton>
       <div className="container mx-auto px-4 py-12 mt-24 sm:mt-28">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
