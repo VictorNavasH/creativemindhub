@@ -58,18 +58,18 @@ const tools = [
     link: "#"
   },
   {
-    title: "Google Analytics",
-    icon: <BarChart3 className="w-full h-full" />,
-    description: "Análisis y métricas de tráfico web",
-    bgColor: "#FFEDF5",
-    link: "https://analytics.google.com/"
-  },
-  {
     title: "Google My Business",
     icon: <Globe className="w-full h-full" />,
     description: "Gestiona tu presencia en Google",
     bgColor: "#FDF7FF",
     link: "https://business.google.com/dashboard"
+  },
+  {
+    title: "Google Analytics",
+    icon: <BarChart3 className="w-full h-full" />,
+    description: "Análisis y métricas de tráfico web",
+    bgColor: "#FFEDF5",
+    link: "https://analytics.google.com/"
   },
   {
     title: "Editor Web",
