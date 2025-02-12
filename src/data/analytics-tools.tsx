@@ -4,7 +4,7 @@ import { Tool } from "./tool-types";
 import {
   BarChart3,
   PieChart,
-  Globe
+  Image
 } from "lucide-react";
 
 export const analyticsTools: Tool[] = [
@@ -23,9 +23,9 @@ export const analyticsTools: Tool[] = [
     link: "https://analytics.zoho.com/"
   },
   {
-    title: "SEO Global",
-    icon: <Globe className="w-full h-full" />,
-    description: "Optimización para búsquedas internacionales",
+    title: "IA Imagen",
+    icon: <Image className="w-full h-full" />,
+    description: "Generación y edición de imágenes con IA",
     bgColor: "#E0FCFF",
     link: "#"
   }
