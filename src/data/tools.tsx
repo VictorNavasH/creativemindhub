@@ -86,6 +86,20 @@ export const tools = [
     link: "#"
   },
   {
+    title: "SEO Global",
+    icon: <Globe className="w-full h-full" />,
+    description: "Optimización para búsquedas internacionales",
+    bgColor: "#E0FCFF",
+    link: "#"
+  },
+  {
+    title: "Marketing Pro",
+    icon: <Target className="w-full h-full" />,
+    description: "Marketing avanzado y estrategias",
+    bgColor: "#E0FCFF",
+    link: "#"
+  },
+  {
     title: "Marketing Dirigido",
     icon: <Target className="w-full h-full" />,
     description: "Segmentación y targeting avanzado",
