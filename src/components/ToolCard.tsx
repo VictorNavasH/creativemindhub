@@ -6,14 +6,16 @@ interface ToolCardProps {
   icon: React.ReactNode;
   description: string;
   onClick: () => void;
+  bgColor?: string;
 }
 
-export const ToolCard = ({ title, icon, description, onClick }: ToolCardProps) => {
+export const ToolCard = ({ title, icon, description, onClick, bgColor = "#E8EDF3" }: ToolCardProps) => {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="bg-[#E8EDF3] rounded-xl p-4 hover-card shadow-lg shadow-black/50 border border-white/10 h-[140px] flex flex-col justify-between"
+      className="rounded-xl p-4 hover-card shadow-lg shadow-black/50 border border-white/10 h-[140px] flex flex-col justify-between"
+      style={{ backgroundColor: bgColor }}
       onClick={onClick}
     >
       <div className="flex items-center gap-3 mb-2">
