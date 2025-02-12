@@ -11,13 +11,18 @@ interface ToolCardProps {
 }
 
 export const ToolCard = ({ title, icon, description, onClick, bgColor = "#ffffff" }: ToolCardProps) => {
-  console.log("ToolCard rendering:", title); // Añadido para debug
+  console.log("ToolCard rendering:", title);
   
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ 
+        scale: 1.05,
+        rotate: 1,
+        y: -5,
+        transition: { duration: 0.2 }
+      }}
       whileTap={{ scale: 0.98 }}
-      className="rounded-xl p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 h-[140px] flex flex-col justify-between cursor-pointer backdrop-blur-sm"
+      className="rounded-xl p-4 shadow-xl hover:shadow-2xl transition-all duration-300 h-[140px] flex flex-col justify-between cursor-pointer backdrop-blur-sm"
       style={{ backgroundColor: bgColor }}
       onClick={onClick}
     >
