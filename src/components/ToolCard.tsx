@@ -13,7 +13,7 @@ export const ToolCard = ({ title, icon, description, onClick }: ToolCardProps) =
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="bg-black/90 rounded-xl p-6 hover-card shadow-lg shadow-black/50 border border-white/10"
+      className="bg-[#364f6b]/90 rounded-xl p-6 hover-card shadow-lg shadow-black/50 border border-white/10"
       onClick={onClick}
     >
       <div className="flex items-center gap-4 mb-3">
