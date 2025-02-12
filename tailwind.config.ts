@@ -92,6 +92,9 @@ export default {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
       },
+      backgroundImage: {
+        'gradient-custom': 'linear-gradient(to bottom, #eee, #FFDEE2)',
+      }
     },
   },
   plugins: [
@@ -99,11 +102,11 @@ export default {
     plugin(({ addBase }) => {
       addBase({
         ":root": {
-          "--background": "0 0% 93%",
+          "--background": "0 0% 100%",
           "--foreground": "240 10% 3.9%",
-          "--card": "0 0% 93%",
+          "--card": "0 0% 100%",
           "--card-foreground": "240 10% 3.9%",
-          "--popover": "0 0% 93%",
+          "--popover": "0 0% 100%",
           "--popover-foreground": "240 10% 3.9%",
           "--primary": "240 5.9% 10%",
           "--primary-foreground": "0 0% 98%",

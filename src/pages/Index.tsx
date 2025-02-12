@@ -6,7 +6,7 @@ import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-custom">
       <TubelightNavbar />
       <MovingBorderButton 
         containerClassName="w-full h-full fixed inset-0 -z-10"
