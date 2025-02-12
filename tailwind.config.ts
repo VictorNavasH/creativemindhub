@@ -49,6 +49,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        custom: {
+          primary: "#02b1c4",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,7 +96,7 @@ export default {
         "fade-in": "fade-in 0.3s ease-out",
       },
       backgroundImage: {
-        'gradient-custom': 'linear-gradient(to bottom, #eee, #FFDEE2)',
+        'gradient-custom': 'linear-gradient(to bottom, #02b1c4, #02b1c4)',
       }
     },
   },
