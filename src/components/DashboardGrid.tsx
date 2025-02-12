@@ -142,7 +142,7 @@ export const DashboardGrid = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-8"
     >
       {tools.map((tool, index) => (
         <motion.div key={tool.title} variants={item}>
