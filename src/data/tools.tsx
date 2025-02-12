@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   BarChart3,
@@ -17,7 +18,8 @@ import {
   Palette,
   FolderOpen,
   Cloud,
-  Image
+  Image,
+  Brain
 } from "lucide-react";
 
 export const tools = [
@@ -107,7 +109,7 @@ export const tools = [
   },
   {
     title: "IA",
-    icon: <Cloud className="w-full h-full" />,
+    icon: <Brain className="w-full h-full" />,
     description: "Espacio de trabajo colaborativo en la nube",
     bgColor: "#E5FFFB",
     link: "https://workplace.zoho.eu/#dashboard/"
