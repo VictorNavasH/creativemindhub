@@ -48,9 +48,9 @@ export function DockNavigation() {
         {data.map((item, idx) => (
           <DockItem
             key={idx}
-            className='aspect-square rounded-full bg-[#e8edf3] shadow-lg hover:bg-[#e8edf3]/80 transition-colors'
+            className='aspect-square rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors'
           >
-            <DockLabel className="bg-[#e8edf3] text-neutral-600">{item.title}</DockLabel>
+            <DockLabel className="bg-white text-neutral-600">{item.title}</DockLabel>
             <DockIcon>{item.icon}</DockIcon>
           </DockItem>
         ))}
