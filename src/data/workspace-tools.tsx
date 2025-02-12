@@ -46,7 +46,7 @@ export const workspaceTools: Tool[] = [
     title: "Notion",
     icon: <Layout className="w-full h-full" />,
     description: "Espacio de trabajo y documentación",
-    bgColor: "#E8EDF3",
+    bgColor: "#FFF3E5",
     link: "https://www.notion.so/"
   },
   {
