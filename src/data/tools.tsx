@@ -139,21 +139,21 @@ export const tools = [
     title: "Canva",
     icon: <Palette className="w-full h-full" />,
     description: "Diseño gráfico y creación de contenido",
-    bgColor: "#FFEDF5",
+    bgColor: "#FBEBFF",
     link: "https://www.canva.com/"
   },
   {
     title: "Envato Elements",
     icon: <Image className="w-full h-full" />,
     description: "Recursos creativos y plantillas",
-    bgColor: "#FFF5F5",
+    bgColor: "#FBEBFF",
     link: "https://elements.envato.com/"
   },
   {
     title: "Recursos",
     icon: <FolderOpen className="w-full h-full" />,
     description: "Carpeta de recursos compartidos",
-    bgColor: "#FFF5F5",
+    bgColor: "#FBEBFF",
     link: "https://drive.google.com/drive/folders/your-resources-folder"
   },
   {
