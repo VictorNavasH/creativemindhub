@@ -14,7 +14,7 @@ export const tools: Tool[] = [
   marketingTools[2], // Campañas
   platformTools[2], // Reviews
   platformTools[4], // Google My Business
-  platformTools[6], // Reservas (nuevo)
+  platformTools[5], // Reservas
   platformTools[1], // Herramientas Web
   workspaceTools[4], // Notion
   workspaceTools[0], // Zoho Workplace
