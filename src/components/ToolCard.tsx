@@ -27,7 +27,7 @@ export const ToolCard = ({
   isFlippable = false,
   backOptions = []
 }: ToolCardProps) => {
-  console.log("ToolCard rendering:", title);
+  console.log("ToolCard rendering:", title, "with color:", bgColor);
   const [isFlipped, setIsFlipped] = useState(false);
   
   const handleClick = () => {

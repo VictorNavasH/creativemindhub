@@ -14,7 +14,10 @@ const container = {
 };
 
 export const DashboardGrid = () => {
-  console.log("DashboardGrid rendering, tools:", tools); // Para debug
+  console.log("DashboardGrid rendering, tools:", tools.map(tool => ({
+    title: tool.title,
+    color: tool.bgColor
+  }))); 
   
   if (!tools || tools.length === 0) {
     console.error("No tools found!");

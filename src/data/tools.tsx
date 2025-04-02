@@ -47,12 +47,12 @@ export const tools: Tool[] = [
       }
     ]
   },
-  // Add Cloud Storage directly to ensure the correct color is applied
+  // Cloud Storage with the correct color
   {
-    title: workspaceTools[5].title, // Cloud Storage
+    title: "Cloud Storage",
     icon: workspaceTools[5].icon,
     description: workspaceTools[5].description,
-    bgColor: "#FFEDF5", // Explicitly setting the color here
+    bgColor: "#FFEDF5", // Must match Reservas module color
     link: workspaceTools[5].link,
     isFlippable: workspaceTools[5].isFlippable,
     backOptions: workspaceTools[5].backOptions
