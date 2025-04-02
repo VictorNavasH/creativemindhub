@@ -28,9 +28,24 @@ export const platformTools: Tool[] = [
   {
     title: "Reviews",
     icon: <MessageSquare className="w-full h-full" />,
-    description: "Gestión de reseñas y opiniones desde el portal Opinas",
+    description: "Gestión de reseñas y opiniones",
     bgColor: "#FFEDF5",
-    link: "https://app.opinas.es/"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Opinas",
+        link: "https://app.opinas.es/"
+      },
+      {
+        title: "Shapo",
+        link: "https://app.shapo.io/0f1a813ad3/testimonials"
+      },
+      {
+        title: "NÜA Reseñas",
+        link: "https://business.google.com/dashboard/l/17624639967987177500"
+      }
+    ]
   },
   {
     title: "IA Voz / Música",
