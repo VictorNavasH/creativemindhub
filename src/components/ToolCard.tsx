@@ -88,22 +88,22 @@ export const ToolCard = ({
         {/* Cara trasera */}
         {isFlippable && (
           <motion.div
-            className="rounded-xl p-3 shadow-xl transition-all duration-300 absolute w-full h-full flex flex-col justify-between items-center backdrop-blur-sm backface-hidden"
+            className="rounded-xl p-2 shadow-xl transition-all duration-300 absolute w-full h-full flex flex-col justify-between items-center backdrop-blur-sm backface-hidden"
             style={{ 
               backgroundColor: bgColor,
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden"
             }}
           >
-            <div className="w-full text-center mb-1">
-              <h3 className="text-sm font-semibold text-[#364f6b] mb-2">Selecciona una opción</h3>
-              <div className="flex flex-col gap-1.5">
+            <div className="w-full text-center mb-0.5">
+              <h3 className="text-xs font-semibold text-[#364f6b] mb-1.5">Selecciona una opción</h3>
+              <div className="flex flex-col gap-1">
                 {backOptions.map((option, index) => (
                   <Button 
                     key={index}
                     variant="outline"
                     size="sm"
-                    className="w-full bg-white/50 hover:bg-white/80 transition-colors text-xs py-1"
+                    className="w-full bg-white/50 hover:bg-white/80 transition-colors text-xs py-0.5 h-auto min-h-0"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(option.link, "_blank", "noopener noreferrer");
@@ -114,7 +114,7 @@ export const ToolCard = ({
                 ))}
               </div>
             </div>
-            <div className="text-xs text-[#364f6b] opacity-70">
+            <div className="text-xs text-[#364f6b] opacity-70 mb-1">
               Mueve el ratón fuera para volver
             </div>
           </motion.div>
