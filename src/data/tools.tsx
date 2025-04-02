@@ -46,5 +46,15 @@ export const tools: Tool[] = [
         link: "#"
       }
     ]
+  },
+  // Add Cloud Storage directly to ensure the correct color is applied
+  {
+    title: workspaceTools[5].title, // Cloud Storage
+    icon: workspaceTools[5].icon,
+    description: workspaceTools[5].description,
+    bgColor: "#FFEDF5", // Explicitly setting the color here
+    link: workspaceTools[5].link,
+    isFlippable: workspaceTools[5].isFlippable,
+    backOptions: workspaceTools[5].backOptions
   }
 ];
