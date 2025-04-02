@@ -76,7 +76,7 @@ export const workspaceTools: Tool[] = [
     title: "Cloud Storage",
     icon: <Cloud className="w-full h-full" />,
     description: "Almacenamiento y gestión de archivos",
-    bgColor: "#FFEDF5",
+    bgColor: "#E0FCFF",
     link: "https://drive.zoho.eu/"
   }
 ];
