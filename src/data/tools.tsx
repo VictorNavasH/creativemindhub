@@ -18,7 +18,7 @@ export const tools: Tool[] = [
   platformTools[1], // Herramientas Web
   workspaceTools[4], // Notion
   workspaceTools[3], // Correo Electrónico
-  workspaceTools[0], // Zoho Workplace
+  workspaceTools[0], // Projects
   workspaceTools[2], // Google Workplace
   marketingTools[4], // IA
   platformTools[3], // IA Voz / Música

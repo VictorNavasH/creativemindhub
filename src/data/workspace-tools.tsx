@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -10,16 +9,28 @@ import {
   ShoppingCart,
   Palette,
   Image,
-  FolderOpen
+  FolderOpen,
+  ListTodo
 } from "lucide-react";
 
 export const workspaceTools: Tool[] = [
   {
-    title: "Zoho Workplace",
-    icon: <Cloud className="w-full h-full" />,
-    description: "Espacio de trabajo colaborativo en la nube",
+    title: "Projects",
+    icon: <ListTodo className="w-full h-full" />,
+    description: "Gestión de proyectos y tareas",
     bgColor: "#FFF3E5",
-    link: "https://workplace.zoho.eu/#dashboard/"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Zoho Projects",
+        link: "https://projects.zoho.eu/"
+      },
+      {
+        title: "Zoho ToDo",
+        link: "https://todo.zoho.eu/"
+      }
+    ]
   },
   {
     title: "Smart Tables",
