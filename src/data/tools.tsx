@@ -16,7 +16,13 @@ const cloudStorageModule: Tool = {
   isFlippable: false
 };
 
-// Combinamos las herramientas en el orden deseado - without any Cloud Storage initially
+// Filter function to remove any Cloud Storage entries from imported arrays
+const removeCloudStorage = (tool: Tool) => tool.title !== "Cloud Storage";
+
+// Filtered workspace tools without Cloud Storage
+const filteredWorkspaceTools = workspaceTools.filter(removeCloudStorage);
+
+// Combinamos las herramientas en el orden deseado - without Cloud Storage initially
 export const tools: Tool[] = [
   platformTools[0], // Smart Fidelity Card
   marketingTools[0], // Redes Sociales
@@ -61,12 +67,15 @@ export const tools: Tool[] = [
   cloudStorageModule
 ];
 
-// No additional push operation needed as we've already included it in the array
-
 // Debug log to verify
 console.log("TOOLS ARRAY INITIALIZATION");
 console.log("Total tools:", tools.length);
 console.log("Cloud Storage module color:", cloudStorageModule.bgColor);
+
+// Double-check there's only ONE Cloud Storage in the array
+const cloudStorageCount = tools.filter(tool => tool.title === "Cloud Storage").length;
+console.log(`Found ${cloudStorageCount} Cloud Storage modules in tools array`);
+
 tools.forEach((tool, index) => {
   if (tool.title === "Cloud Storage") {
     console.log(`[INIT] Cloud Storage found at position ${index} with color ${tool.bgColor}`);

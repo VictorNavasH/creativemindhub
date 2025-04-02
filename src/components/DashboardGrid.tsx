@@ -22,6 +22,10 @@ export const DashboardGrid = () => {
   const cloudStorageTools = tools.filter(tool => tool.title === "Cloud Storage");
   console.log("Cloud Storage instances found:", cloudStorageTools.length);
   
+  if (cloudStorageTools.length > 1) {
+    console.error("ERROR: Multiple Cloud Storage instances found!");
+  }
+  
   cloudStorageTools.forEach((tool, index) => {
     console.log(`Cloud Storage ${index + 1}:`, {
       bgColor: tool.bgColor,
@@ -52,7 +56,7 @@ export const DashboardGrid = () => {
         return (
           <AnimatedGridItem 
             key={`${tool.title}-${index}`} 
-            tool={{...tool}} 
+            tool={tool} 
           />
         );
       })}
