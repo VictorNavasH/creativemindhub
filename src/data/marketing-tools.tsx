@@ -68,9 +68,20 @@ export const marketingTools: Tool[] = [
   {
     title: "IA",
     icon: <Brain className="w-full h-full" />,
-    description: "Inteligencia Artificial y automatización",
+    description: "Acceso a almacenamiento en la nube",
     bgColor: "#E0FCFF",
-    link: "#"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Google Drive",
+        link: "https://drive.google.com/drive/u/0/folders/0ANUAQgIMdmCSUk9PVA"
+      },
+      {
+        title: "Zoho Workdrive",
+        link: "https://workdrive.zoho.eu/3bedjadf0d909664a496fb677964aea272b1b/teams/3bedjadf0d909664a496fb677964aea272b1b/ws"
+      }
+    ]
   },
   {
     title: "Meta Business Suite",
