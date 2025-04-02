@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -40,11 +41,22 @@ export const workspaceTools: Tool[] = [
     link: "https://app.powerbi.com/view?r=eyJrIjoiMTExODYwMTktMDE3NS00MzI5LWI2NTMtZjFhMmY1YjJkYjYzIiwidCI6ImIxNjFiM2I0LTU0MDYtNGE4Yy1iNDhmLTQ5ODdjNmI4YmQzOSIsImMiOjl9&pageName=ReportSection6ad7c2c3089c0894342c"
   },
   {
-    title: "Google Workplace",
+    title: "Workplace Suite",
     icon: <Globe className="w-full h-full" />,
-    description: "Suite de herramientas de Google para empresas",
+    description: "Acceso a herramientas de Google y Zoho para empresas",
     bgColor: "#FFF3E5",
-    link: "https://workspace.google.com/"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Google Workplace",
+        link: "https://workspace.google.com/"
+      },
+      {
+        title: "Zoho Workplace",
+        link: "https://workplace.zoho.eu/#dashboard/"
+      }
+    ]
   },
   {
     title: "Correo Electrónico",
