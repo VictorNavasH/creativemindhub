@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -31,9 +32,24 @@ export const marketingTools: Tool[] = [
   {
     title: "CRM",
     icon: <Users className="w-full h-full" />,
-    description: "Zoho CRM y gestión de clientes",
+    description: "Suite completa de herramientas Zoho CRM",
     bgColor: "#FFFAF3",
-    link: "https://crm.zoho.eu/crm/nuasmartrestaurant/tab/Home/begin"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Zoho CRM",
+        link: "https://crm.zoho.eu/crm/nuasmartrestaurant/tab/Home/begin"
+      },
+      {
+        title: "Marketing Automation",
+        link: "https://marketingautomation.zoho.eu/zma/nuasmartrestaurant/home.do#Home:LoadHome"
+      },
+      {
+        title: "Sales IQ",
+        link: "https://salesiq.zoho.eu/siqprojects"
+      }
+    ]
   },
   {
     title: "Campañas",
