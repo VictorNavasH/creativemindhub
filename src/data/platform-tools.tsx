@@ -19,7 +19,7 @@ export const platformTools: Tool[] = [
     link: "https://comeback.es/"
   },
   {
-    title: "Editor Web",
+    title: "Herramientas Web",
     icon: <Layout className="w-full h-full" />,
     description: "Acceso a herramientas de gestión web",
     bgColor: "#FDF7FF",
