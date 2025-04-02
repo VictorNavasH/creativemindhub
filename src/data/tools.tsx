@@ -13,7 +13,7 @@ export const tools: Tool[] = [
   marketingTools[1], // CRM
   marketingTools[2], // Campañas
   platformTools[2], // Reviews
-  platformTools[4], // Google My Business
+  platformTools[4], // Creative Suite (antes Google My Business)
   platformTools[5], // Reservas
   platformTools[1], // Herramientas Web
   workspaceTools[4], // Notion

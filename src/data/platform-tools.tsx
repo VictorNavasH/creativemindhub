@@ -8,7 +8,8 @@ import {
   CreditCard,
   MessageSquare,
   Mic,
-  CalendarDays
+  CalendarDays,
+  Palette
 } from "lucide-react";
 
 export const platformTools: Tool[] = [
@@ -71,11 +72,26 @@ export const platformTools: Tool[] = [
     link: "#"
   },
   {
-    title: "Google My Business",
-    icon: <Globe className="w-full h-full" />,
-    description: "Gestiona tu presencia en Google",
+    title: "Creative Suite",
+    icon: <Palette className="w-full h-full" />,
+    description: "Herramientas de diseño y creatividad",
     bgColor: "#FDF7FF",
-    link: "https://business.google.com/dashboard"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Canva",
+        link: "https://www.canva.com/"
+      },
+      {
+        title: "Renderforest",
+        link: "https://www.renderforest.com/"
+      },
+      {
+        title: "Envato Elements",
+        link: "https://elements.envato.com/"
+      }
+    ]
   },
   {
     title: "Reservas",
