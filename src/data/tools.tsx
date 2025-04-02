@@ -14,8 +14,8 @@ export const tools: Tool[] = [
   marketingTools[2], // Campañas
   platformTools[2], // Reviews
   platformTools[5], // Reservas
-  marketingTools[4], // IA
   platformTools[4], // Creative Suite
+  marketingTools[4], // IA
   workspaceTools[4], // Notion
   workspaceTools[3], // Correo Electrónico
   workspaceTools[0], // Projects
