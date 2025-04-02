@@ -4,7 +4,6 @@ import { marketingTools } from "./marketing-tools";
 import { analyticsTools } from "./analytics-tools";
 import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
-import { creativeTools } from "./creative-tools";
 import { FolderArchive } from "lucide-react";
 
 // Combinamos las herramientas en el orden deseado
@@ -38,13 +37,5 @@ export const tools: Tool[] = [
         link: "#"
       }
     ]
-  },
-  marketingTools[3], // IA Video
-  creativeTools[0], // Reservas
-  marketingTools[5], // Meta Business Suite
-  analyticsTools[1], // Analytics Pro
-  workspaceTools[5], // Zoho Drive
-  creativeTools[1], // Canva
-  creativeTools[2], // Envato Elements
-  creativeTools[3], // Recursos
+  }
 ];
