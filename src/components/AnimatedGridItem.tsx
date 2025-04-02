@@ -13,8 +13,10 @@ const item = {
 };
 
 export const AnimatedGridItem = ({ tool }: AnimatedGridItemProps) => {
-  // Debug log for this specific tool
-  console.log(`AnimatedGridItem rendering: ${tool.title} with color ${tool.bgColor}`);
+  // Special debugging for Cloud Storage
+  if (tool.title === "Cloud Storage") {
+    console.log(`AnimatedGridItem rendering Cloud Storage with color ${tool.bgColor}`);
+  }
   
   return (
     <motion.div variants={item}>

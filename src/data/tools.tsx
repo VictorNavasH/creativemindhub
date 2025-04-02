@@ -6,7 +6,17 @@ import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
 import { FolderArchive, Cloud } from "lucide-react";
 
-// Combinamos las herramientas en el orden deseado
+// Define the Cloud Storage module with the correct color
+const cloudStorageModule: Tool = {
+  title: "Cloud Storage",
+  icon: <Cloud className="w-full h-full" />,
+  description: "Almacenamiento y gestión de archivos",
+  bgColor: "#FFEDF5", // Correct pink color matching Reservas
+  link: "https://drive.zoho.eu/",
+  isFlippable: false
+};
+
+// Combinamos las herramientas en el orden deseado - without any Cloud Storage initially
 export const tools: Tool[] = [
   platformTools[0], // Smart Fidelity Card
   marketingTools[0], // Redes Sociales
@@ -46,21 +56,19 @@ export const tools: Tool[] = [
         link: "#"
       }
     ]
-  }
+  },
+  // Add the Cloud Storage module as a separate object
+  cloudStorageModule
 ];
 
-// Define the Cloud Storage module separately for clarity
-const cloudStorageModule: Tool = {
-  title: "Cloud Storage",
-  icon: <Cloud className="w-full h-full" />,
-  description: "Almacenamiento y gestión de archivos",
-  bgColor: "#FFEDF5", // Exactly match Reservas module color
-  link: "https://drive.zoho.eu/",
-  isFlippable: false
-};
+// No additional push operation needed as we've already included it in the array
 
-// Add it to the tools array
-tools.push(cloudStorageModule);
-
-// Debug log to check the module's color
+// Debug log to verify
+console.log("TOOLS ARRAY INITIALIZATION");
+console.log("Total tools:", tools.length);
 console.log("Cloud Storage module color:", cloudStorageModule.bgColor);
+tools.forEach((tool, index) => {
+  if (tool.title === "Cloud Storage") {
+    console.log(`[INIT] Cloud Storage found at position ${index} with color ${tool.bgColor}`);
+  }
+});

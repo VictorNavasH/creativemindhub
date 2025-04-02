@@ -27,31 +27,10 @@ export const ToolCard = ({
   isFlippable = false,
   backOptions = []
 }: ToolCardProps) => {
-  // Force comprehensive logging of each card as it renders
-  console.log(`ToolCard [${title}]:`, { 
-    title, 
-    bgColor, 
-    isFlippable,
-    hasIcon: !!icon,
-    backOptionsCount: backOptions?.length || 0
-  });
-  
-  // Extra check specifically for Cloud Storage
-  useEffect(() => {
-    if (title === "Cloud Storage") {
-      console.log(`Cloud Storage card rendered with color: ${bgColor}`);
-      // Force a DOM check
-      setTimeout(() => {
-        const elements = document.querySelectorAll('[data-title="Cloud Storage"]');
-        elements.forEach(el => {
-          console.log('DOM Cloud Storage element:', {
-            style: (el as HTMLElement).style.backgroundColor,
-            dataColor: el.getAttribute('data-color')
-          });
-        });
-      }, 100);
-    }
-  }, [title, bgColor]);
+  // Special debugging for Cloud Storage
+  if (title === "Cloud Storage") {
+    console.log(`ToolCard rendering Cloud Storage with color: ${bgColor}`);
+  }
   
   const [isFlipped, setIsFlipped] = useState(false);
   
@@ -73,11 +52,29 @@ export const ToolCard = ({
     }
   };
 
-  // Add specific inline styles to guarantee the color is applied
+  // Ensure style is directly applied
   const cardStyle = {
     backgroundColor: bgColor,
     backfaceVisibility: "hidden" as const,
   };
+
+  // For Cloud Storage, add a useEffect to verify DOM element after render
+  useEffect(() => {
+    if (title === "Cloud Storage") {
+      const timer = setTimeout(() => {
+        const elements = document.querySelectorAll(`[data-title="Cloud Storage"]`);
+        console.log(`Found ${elements.length} Cloud Storage DOM elements`);
+        elements.forEach((el, i) => {
+          const style = window.getComputedStyle(el);
+          console.log(`Cloud Storage element ${i} computed style:`, { 
+            backgroundColor: style.backgroundColor,
+            dataColor: el.getAttribute('data-color')
+          });
+        });
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [title]);
 
   return (
     <div 
