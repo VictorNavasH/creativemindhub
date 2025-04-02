@@ -46,14 +46,15 @@ export const tools: Tool[] = [
         link: "#"
       }
     ]
-  },
-  // Completely define Cloud Storage without referencing workspaceTools[5]
-  {
-    title: "Cloud Storage",
-    icon: <Cloud className="w-full h-full" />,
-    description: "Almacenamiento y gestión de archivos",
-    bgColor: "#FFEDF5", // Match Reservas module color
-    link: "https://drive.zoho.eu/",
-    isFlippable: false
   }
 ];
+
+// Explicitly add Cloud Storage as a separate entry with the correct color
+tools.push({
+  title: "Cloud Storage",
+  icon: <Cloud className="w-full h-full" />,
+  description: "Almacenamiento y gestión de archivos",
+  bgColor: "#FFEDF5", // Match Reservas module color exactly
+  link: "https://drive.zoho.eu/",
+  isFlippable: false
+});

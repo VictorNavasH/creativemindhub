@@ -71,12 +71,7 @@ export const workspaceTools: Tool[] = [
     description: "Espacio de trabajo y documentación",
     bgColor: "#FFF3E5",
     link: "https://www.notion.so/"
-  },
-  {
-    title: "Cloud Storage",
-    icon: <Cloud className="w-full h-full" />,
-    description: "Almacenamiento y gestión de archivos",
-    bgColor: "#FFEDF5", // Exactly match Reservas color
-    link: "https://drive.zoho.eu/"
   }
+  // Removing the Cloud Storage entry from workspaceTools to avoid any conflicts
+  // We're defining it exclusively in the tools.tsx file now
 ];

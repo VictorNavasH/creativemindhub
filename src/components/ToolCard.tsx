@@ -27,7 +27,15 @@ export const ToolCard = ({
   isFlippable = false,
   backOptions = []
 }: ToolCardProps) => {
-  console.log("ToolCard rendering:", title, "with color:", bgColor);
+  // Force a comprehensive log of each tool's properties
+  console.log(`ToolCard [${title}]:`, { 
+    title, 
+    bgColor, 
+    isFlippable,
+    hasIcon: !!icon,
+    backOptionsCount: backOptions?.length || 0
+  });
+  
   const [isFlipped, setIsFlipped] = useState(false);
   
   const handleClick = () => {
@@ -75,6 +83,8 @@ export const ToolCard = ({
             backfaceVisibility: "hidden"
           }}
           onClick={handleClick}
+          data-title={title}
+          data-color={bgColor}
         >
           <div className="flex items-center gap-3 mb-2">
             <div className="text-[#364f6b] w-8 h-8">
