@@ -37,7 +37,7 @@ export const workspaceTools: Tool[] = [
     title: "Smart Tables",
     icon: <Table className="w-full h-full" />,
     description: "Análisis y estadísticas en tiempo real",
-    bgColor: "#E5FFFB",
+    bgColor: "#E0FCFF",
     link: "https://app.powerbi.com/view?r=eyJrIjoiMTExODYwMTktMDE3NS00MzI5LWI2NTMtZjFhMmY1YjJkYjYzIiwidCI6ImIxNjFiM2I0LTU0MDYtNGE4Yy1iNDhmLTQ5ODdjNmI4YmQzOSIsImMiOjl9&pageName=ReportSection6ad7c2c3089c0894342c"
   },
   {
@@ -76,7 +76,7 @@ export const workspaceTools: Tool[] = [
     title: "Zoho Drive",
     icon: <Cloud className="w-full h-full" />,
     description: "Almacenamiento y gestión de archivos",
-    bgColor: "#FBEBFF",
+    bgColor: "#FFEDF5",
     link: "https://drive.zoho.eu/"
   }
 ];

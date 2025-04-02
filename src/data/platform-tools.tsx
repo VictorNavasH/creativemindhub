@@ -90,7 +90,7 @@ export const platformTools: Tool[] = [
     title: "Creative Suite",
     icon: <Palette className="w-full h-full" />,
     description: "Herramientas de diseño y creatividad",
-    bgColor: "#FDF7FF",
+    bgColor: "#FFEDF5",
     link: "#",
     isFlippable: true,
     backOptions: [
@@ -112,7 +112,7 @@ export const platformTools: Tool[] = [
     title: "Reservas",
     icon: <CalendarDays className="w-full h-full" />,
     description: "Sistema de reservas para el restaurante",
-    bgColor: "#F0F8FF",
+    bgColor: "#FFEDF5",
     link: "https://nuasmartrestaurant.myrestoo.net/myrestoo/beta/bookings"
   }
 ];
