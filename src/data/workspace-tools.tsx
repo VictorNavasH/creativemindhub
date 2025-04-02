@@ -73,7 +73,7 @@ export const workspaceTools: Tool[] = [
     link: "https://www.notion.so/"
   },
   {
-    title: "Zoho Drive",
+    title: "Cloud Storage",
     icon: <Cloud className="w-full h-full" />,
     description: "Almacenamiento y gestión de archivos",
     bgColor: "#FFEDF5",
