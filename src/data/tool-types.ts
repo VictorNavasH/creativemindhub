@@ -7,4 +7,9 @@ export interface Tool {
   description: string;
   bgColor: string;
   link: string;
+  isFlippable?: boolean;
+  backOptions?: {
+    title: string;
+    link: string;
+  }[];
 }

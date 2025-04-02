@@ -9,6 +9,11 @@ interface AnimatedGridItemProps {
     description: string;
     bgColor: string;
     link: string;
+    isFlippable?: boolean;
+    backOptions?: {
+      title: string;
+      link: string;
+    }[];
   };
 }
 
@@ -23,7 +28,7 @@ export const AnimatedGridItem = ({ tool }: AnimatedGridItemProps) => {
       <ToolCard
         {...tool}
         onClick={() => {
-          if (tool.link !== "#") {
+          if (tool.link !== "#" && !tool.isFlippable) {
             window.open(tool.link, "_blank", "noopener noreferrer");
           }
         }}

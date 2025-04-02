@@ -28,9 +28,24 @@ export const marketingTools: Tool[] = [
   {
     title: "Campañas",
     icon: <Megaphone className="w-full h-full" />,
-    description: "Zoho Campaigns y email marketing",
+    description: "Gestión integrada de campañas publicitarias",
     bgColor: "#FFFAF3",
-    link: "https://campaigns.zoho.eu/campaigns/org20100141836/home.do#dashboard"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Zoho Campaigns",
+        link: "https://campaigns.zoho.eu/campaigns/org20100141836/home.do#dashboard"
+      },
+      {
+        title: "Google Ads",
+        link: "https://ads.google.com/"
+      },
+      {
+        title: "Meta Ads",
+        link: "https://business.facebook.com/adsmanager/"
+      }
+    ]
   },
   {
     title: "IA Video",

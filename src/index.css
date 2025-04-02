@@ -76,3 +76,16 @@
     background-position: 0% 50%;
   }
 }
+
+/* Estilos para efectos 3D */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
