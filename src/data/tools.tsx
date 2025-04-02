@@ -5,6 +5,7 @@ import { analyticsTools } from "./analytics-tools";
 import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
 import { creativeTools } from "./creative-tools";
+import { FolderArchive } from "lucide-react";
 
 // Combinamos las herramientas en el orden deseado
 export const tools: Tool[] = [
@@ -26,7 +27,7 @@ export const tools: Tool[] = [
   {
     // Custom resources tool replacing analyticsTools[2]
     title: "Recursos varios",
-    icon: analyticsTools[2].icon,
+    icon: <FolderArchive className="w-full h-full" />,
     description: "Recursos y herramientas adicionales",
     bgColor: analyticsTools[2].bgColor,
     link: "#",
