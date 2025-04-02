@@ -102,7 +102,7 @@ export const marketingTools: Tool[] = [
     title: "Meta Business Suite",
     icon: <Globe className="w-full h-full" />,
     description: "Gestión empresarial de Meta",
-    bgColor: "#E5FFFB",
+    bgColor: "#FFEDF5", // Changed from "#E5FFFB" to match the Reviews module color
     link: "https://business.facebook.com/"
   }
 ];
