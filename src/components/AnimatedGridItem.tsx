@@ -1,20 +1,10 @@
 
 import { motion } from "framer-motion";
 import { ToolCard } from "./ToolCard";
+import { Tool } from "../data/tool-types";
 
 interface AnimatedGridItemProps {
-  tool: {
-    title: string;
-    icon: React.ReactNode;
-    description: string;
-    bgColor: string;
-    link: string;
-    isFlippable?: boolean;
-    backOptions?: {
-      title: string;
-      link: string;
-    }[];
-  };
+  tool: Tool;
 }
 
 const item = {
@@ -23,10 +13,19 @@ const item = {
 };
 
 export const AnimatedGridItem = ({ tool }: AnimatedGridItemProps) => {
+  // Debug log for this specific tool
+  console.log(`AnimatedGridItem rendering: ${tool.title} with color ${tool.bgColor}`);
+  
   return (
     <motion.div variants={item}>
       <ToolCard
-        {...tool}
+        title={tool.title}
+        icon={tool.icon}
+        description={tool.description}
+        bgColor={tool.bgColor}
+        link={tool.link}
+        isFlippable={tool.isFlippable}
+        backOptions={tool.backOptions}
         onClick={() => {
           if (tool.link !== "#" && !tool.isFlippable) {
             window.open(tool.link, "_blank", "noopener noreferrer");

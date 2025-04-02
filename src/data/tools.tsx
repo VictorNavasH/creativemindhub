@@ -49,12 +49,18 @@ export const tools: Tool[] = [
   }
 ];
 
-// Explicitly add Cloud Storage as a separate entry with the correct color
-tools.push({
+// Define the Cloud Storage module separately for clarity
+const cloudStorageModule: Tool = {
   title: "Cloud Storage",
   icon: <Cloud className="w-full h-full" />,
   description: "Almacenamiento y gestión de archivos",
-  bgColor: "#FFEDF5", // Match Reservas module color exactly
+  bgColor: "#FFEDF5", // Exactly match Reservas module color
   link: "https://drive.zoho.eu/",
   isFlippable: false
-});
+};
+
+// Add it to the tools array
+tools.push(cloudStorageModule);
+
+// Debug log to check the module's color
+console.log("Cloud Storage module color:", cloudStorageModule.bgColor);

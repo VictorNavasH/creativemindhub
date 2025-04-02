@@ -14,13 +14,25 @@ const container = {
 };
 
 export const DashboardGrid = () => {
-  // Very detailed log to debug the tools array
-  console.log("DashboardGrid FULL TOOLS ARRAY:", JSON.stringify(tools, null, 2));
+  // Super detailed logging of each tool
+  console.log("----------------------- DASHBOARD GRID DEBUG -----------------------");
+  console.log("Full tools array:", JSON.stringify(tools, null, 2));
   
-  // Check if there are duplicate Cloud Storage entries
-  const cloudStorageEntries = tools.filter(tool => tool.title === "Cloud Storage");
-  console.log(`Found ${cloudStorageEntries.length} Cloud Storage entries:`, 
-    cloudStorageEntries.map((tool, i) => `Entry ${i+1}: ${tool.bgColor}`));
+  // Special focus on Cloud Storage
+  const cloudStorageTools = tools.filter(tool => tool.title === "Cloud Storage");
+  if (cloudStorageTools.length > 0) {
+    console.log("Found Cloud Storage tools:", cloudStorageTools.length);
+    cloudStorageTools.forEach((tool, index) => {
+      console.log(`Cloud Storage ${index + 1}:`, {
+        bgColor: tool.bgColor,
+        position: tools.indexOf(tool),
+        isFlippable: tool.isFlippable,
+        link: tool.link
+      });
+    });
+  } else {
+    console.error("No Cloud Storage tool found!");
+  }
   
   if (!tools || tools.length === 0) {
     console.error("No tools found!");
@@ -35,10 +47,14 @@ export const DashboardGrid = () => {
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6"
     >
       {tools.map((tool, index) => {
-        // Log each tool right before rendering to verify what's passed to AnimatedGridItem
-        console.log(`Rendering tool ${index}: ${tool.title} with color ${tool.bgColor}`);
+        // Log each tool right before rendering with its exact properties
+        console.log(`Rendering tool ${index}: ${tool.title}`, {
+          bgColor: tool.bgColor,
+          reference: Object.is(tool, cloudStorageTools[0]) ? "MATCHES_REFERENCE" : "DIFFERENT_REFERENCE"
+        });
+        
         return (
-          <AnimatedGridItem key={`${tool.title}-${index}`} tool={tool} />
+          <AnimatedGridItem key={`${tool.title}-${index}`} tool={{...tool}} />
         );
       })}
     </motion.div>

@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 
 interface ToolCardProps {
@@ -27,7 +27,7 @@ export const ToolCard = ({
   isFlippable = false,
   backOptions = []
 }: ToolCardProps) => {
-  // Force a comprehensive log of each tool's properties
+  // Force comprehensive logging of each card as it renders
   console.log(`ToolCard [${title}]:`, { 
     title, 
     bgColor, 
@@ -35,6 +35,23 @@ export const ToolCard = ({
     hasIcon: !!icon,
     backOptionsCount: backOptions?.length || 0
   });
+  
+  // Extra check specifically for Cloud Storage
+  useEffect(() => {
+    if (title === "Cloud Storage") {
+      console.log(`Cloud Storage card rendered with color: ${bgColor}`);
+      // Force a DOM check
+      setTimeout(() => {
+        const elements = document.querySelectorAll('[data-title="Cloud Storage"]');
+        elements.forEach(el => {
+          console.log('DOM Cloud Storage element:', {
+            style: (el as HTMLElement).style.backgroundColor,
+            dataColor: el.getAttribute('data-color')
+          });
+        });
+      }, 100);
+    }
+  }, [title, bgColor]);
   
   const [isFlipped, setIsFlipped] = useState(false);
   
@@ -56,6 +73,12 @@ export const ToolCard = ({
     }
   };
 
+  // Add specific inline styles to guarantee the color is applied
+  const cardStyle = {
+    backgroundColor: bgColor,
+    backfaceVisibility: "hidden" as const,
+  };
+
   return (
     <div 
       className="h-[140px] relative perspective-1000" 
@@ -66,7 +89,7 @@ export const ToolCard = ({
         className="w-full h-full relative preserve-3d transition-all duration-500"
         style={{ 
           transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
-          transformStyle: "preserve-3d"
+          transformStyle: "preserve-3d" as const
         }}
       >
         {/* Cara frontal */}
@@ -78,10 +101,7 @@ export const ToolCard = ({
           } : {}}
           whileTap={!isFlipped ? { scale: 0.95 } : {}}
           className="rounded-xl p-4 shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between cursor-pointer backdrop-blur-sm absolute w-full backface-hidden"
-          style={{ 
-            backgroundColor: bgColor,
-            backfaceVisibility: "hidden"
-          }}
+          style={cardStyle}
           onClick={handleClick}
           data-title={title}
           data-color={bgColor}
@@ -102,7 +122,7 @@ export const ToolCard = ({
             style={{ 
               backgroundColor: bgColor,
               transform: "rotateY(180deg)",
-              backfaceVisibility: "hidden"
+              backfaceVisibility: "hidden" as const
             }}
           >
             <div className="w-full text-center mb-0.5">
