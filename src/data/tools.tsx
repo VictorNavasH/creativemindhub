@@ -15,12 +15,12 @@ export const tools: Tool[] = [
   platformTools[2], // Reviews
   platformTools[5], // Reservas
   marketingTools[4], // IA
-  platformTools[1], // Herramientas Web
+  platformTools[4], // Creative Suite
   workspaceTools[4], // Notion
   workspaceTools[3], // Correo Electrónico
   workspaceTools[0], // Projects
   workspaceTools[2], // Google Workplace
-  platformTools[4], // Creative Suite
+  platformTools[1], // Herramientas Web
   platformTools[3], // IA Voz / Música
   analyticsTools[2], // IA Imagen
   marketingTools[3], // IA Video
