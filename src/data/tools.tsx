@@ -23,7 +23,21 @@ export const tools: Tool[] = [
   platformTools[1], // Herramientas Web
   platformTools[3], // IA Voz / Música
   workspaceTools[1], // Smart Tables
-  analyticsTools[2], // IA Imagen
+  {
+    // Custom resources tool replacing analyticsTools[2]
+    title: "Recursos varios",
+    icon: analyticsTools[2].icon,
+    description: "Recursos y herramientas adicionales",
+    bgColor: analyticsTools[2].bgColor,
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Próximamente",
+        link: "#"
+      }
+    ]
+  },
   marketingTools[3], // IA Video
   creativeTools[0], // Reservas
   marketingTools[5], // Meta Business Suite
