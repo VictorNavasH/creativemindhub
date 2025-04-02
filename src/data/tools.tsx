@@ -16,37 +16,40 @@ const cloudStorageModule: Tool = {
   isFlippable: false
 };
 
-// Filter function to remove any Cloud Storage entries from imported arrays
+// Filter function to remove any Cloud Storage entries from all imported tool arrays
 const removeCloudStorage = (tool: Tool) => tool.title !== "Cloud Storage";
 
-// Filtered workspace tools without Cloud Storage
+// Apply the filter to all imported tool arrays to prevent duplicates
+const filteredPlatformTools = platformTools.filter(removeCloudStorage);
+const filteredMarketingTools = marketingTools.filter(removeCloudStorage);
 const filteredWorkspaceTools = workspaceTools.filter(removeCloudStorage);
+const filteredAnalyticsTools = analyticsTools.filter(removeCloudStorage);
 
-// Combinamos las herramientas en el orden deseado - without Cloud Storage initially
+// Combinamos las herramientas en el orden deseado - ensuring NO Cloud Storage is in the array yet
 export const tools: Tool[] = [
-  platformTools[0], // Smart Fidelity Card
-  marketingTools[0], // Redes Sociales
-  marketingTools[1], // CRM
-  marketingTools[2], // Campañas
-  platformTools[2], // Reviews
-  platformTools[5], // Reservas
-  platformTools[4], // Creative Suite
-  marketingTools[4], // IA
-  workspaceTools[4], // Notion
-  workspaceTools[3], // Correo Electrónico
-  workspaceTools[0], // Projects
-  workspaceTools[2], // Google Workplace
-  platformTools[1], // Herramientas Web
-  platformTools[3], // IA Voz / Música
+  filteredPlatformTools[0], // Smart Fidelity Card
+  filteredMarketingTools[0], // Redes Sociales
+  filteredMarketingTools[1], // CRM
+  filteredMarketingTools[2], // Campañas
+  filteredPlatformTools[2], // Reviews
+  filteredPlatformTools[5], // Reservas
+  filteredPlatformTools[4], // Creative Suite
+  filteredMarketingTools[4], // IA
+  filteredWorkspaceTools[4], // Notion
+  filteredWorkspaceTools[3], // Correo Electrónico
+  filteredWorkspaceTools[0], // Projects
+  filteredWorkspaceTools[2], // Google Workplace
+  filteredPlatformTools[1], // Herramientas Web
+  filteredPlatformTools[3], // IA Voz / Música
   {
     // Smart Tables (was workspaceTools[1])
     title: "Smart Tables",
-    icon: workspaceTools[1].icon,
-    description: workspaceTools[1].description,
+    icon: filteredWorkspaceTools[1].icon,
+    description: filteredWorkspaceTools[1].description,
     bgColor: "#E0FCFF", // Mismo color que IA
-    link: workspaceTools[1].link,
-    isFlippable: workspaceTools[1].isFlippable,
-    backOptions: workspaceTools[1].backOptions
+    link: filteredWorkspaceTools[1].link,
+    isFlippable: filteredWorkspaceTools[1].isFlippable,
+    backOptions: filteredWorkspaceTools[1].backOptions
   },
   {
     // Custom resources tool (was analyticsTools[2])
@@ -63,7 +66,7 @@ export const tools: Tool[] = [
       }
     ]
   },
-  // Add the Cloud Storage module as a separate object
+  // Add the Cloud Storage module as a separate object - THIS IS THE ONLY CLOUD STORAGE INSTANCE
   cloudStorageModule
 ];
 
