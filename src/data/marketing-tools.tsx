@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -66,7 +65,7 @@ export const marketingTools: Tool[] = [
     link: "#"
   },
   {
-    title: "IA",
+    title: "Cloud Storage",
     icon: <Brain className="w-full h-full" />,
     description: "Acceso a almacenamiento en la nube",
     bgColor: "#E0FCFF",
