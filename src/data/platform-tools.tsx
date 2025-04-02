@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -6,7 +7,7 @@ import {
   Globe,
   CreditCard,
   MessageSquare,
-  Mic,
+  Brain,
   CalendarDays,
   Palette
 } from "lucide-react";
@@ -65,7 +66,7 @@ export const platformTools: Tool[] = [
   },
   {
     title: "IA",
-    icon: <Mic className="w-full h-full" />,
+    icon: <Brain className="w-full h-full" />,
     description: "Inteligencia artificial para voz, imagen y video",
     bgColor: "#E0FCFF",
     link: "#",
