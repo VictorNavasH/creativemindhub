@@ -103,13 +103,14 @@ export const ToolCard = ({
                     key={index}
                     variant="outline"
                     size="sm"
-                    className="w-full bg-white/50 hover:bg-white/80 text-[#364f6b] hover:text-[#364f6b] font-medium transition-colors text-xs py-0.5 h-auto min-h-0"
+                    className="w-full bg-white/50 hover:bg-white/80 text-[#364f6b] hover:text-[#364f6b] font-medium transition-colors text-xs py-0.5 h-auto min-h-0 relative overflow-hidden group"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(option.link, "_blank", "noopener noreferrer");
                     }}
                   >
-                    {option.title}
+                    <span className="relative z-10">{option.title}</span>
+                    <span className="absolute inset-0 w-0 bg-sky-200 group-hover:w-full transition-all duration-300 ease-out -z-0"></span>
                   </Button>
                 ))}
               </div>
