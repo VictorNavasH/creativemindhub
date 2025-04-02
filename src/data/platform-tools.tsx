@@ -7,7 +7,8 @@ import {
   Globe,
   CreditCard,
   MessageSquare,
-  Mic
+  Mic,
+  CalendarDays
 } from "lucide-react";
 
 export const platformTools: Tool[] = [
@@ -75,5 +76,12 @@ export const platformTools: Tool[] = [
     description: "Gestiona tu presencia en Google",
     bgColor: "#FDF7FF",
     link: "https://business.google.com/dashboard"
+  },
+  {
+    title: "Reservas",
+    icon: <CalendarDays className="w-full h-full" />,
+    description: "Sistema de reservas para el restaurante",
+    bgColor: "#F0F8FF",
+    link: "https://nuasmartrestaurant.myrestoo.net/myrestoo/beta/bookings"
   }
 ];
