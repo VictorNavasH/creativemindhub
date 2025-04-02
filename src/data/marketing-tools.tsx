@@ -16,7 +16,18 @@ export const marketingTools: Tool[] = [
     icon: <Share2 className="w-full h-full" />,
     description: "Gestión unificada de redes sociales",
     bgColor: "#FFFAF3",
-    link: "https://social.zoho.eu/social/nuasmartrestaurant/200856000000013017/Home.do?isAccessRequested=true#home"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Zoho Social",
+        link: "https://social.zoho.eu/social/nuasmartrestaurant/200856000000013017/Home.do?isAccessRequested=true#home"
+      },
+      {
+        title: "Meta Business Suite",
+        link: "https://business.facebook.com/latest/home?nav_ref=bm_home_redirect&business_id=300141681170395&asset_id=101280734957025"
+      }
+    ]
   },
   {
     title: "CRM",
