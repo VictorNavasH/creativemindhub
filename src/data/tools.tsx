@@ -13,7 +13,6 @@ export const tools: Tool[] = [
   marketingTools[1], // CRM
   marketingTools[2], // Campañas
   platformTools[2], // Reviews
-  platformTools[4], // Creative Suite (antes Google My Business)
   platformTools[5], // Reservas
   marketingTools[4], // IA
   platformTools[1], // Herramientas Web
@@ -21,6 +20,7 @@ export const tools: Tool[] = [
   workspaceTools[3], // Correo Electrónico
   workspaceTools[0], // Projects
   workspaceTools[2], // Google Workplace
+  platformTools[4], // Creative Suite
   platformTools[3], // IA Voz / Música
   analyticsTools[2], // IA Imagen
   marketingTools[3], // IA Video
