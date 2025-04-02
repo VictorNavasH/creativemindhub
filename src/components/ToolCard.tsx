@@ -103,7 +103,7 @@ export const ToolCard = ({
                     key={index}
                     variant="outline"
                     size="sm"
-                    className="w-full bg-white/50 hover:bg-white/80 transition-colors text-xs py-0.5 h-auto min-h-0"
+                    className="w-full bg-white/50 hover:bg-white/80 text-[#364f6b] hover:text-[#364f6b] font-medium transition-colors text-xs py-0.5 h-auto min-h-0"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(option.link, "_blank", "noopener noreferrer");
