@@ -21,9 +21,24 @@ export const platformTools: Tool[] = [
   {
     title: "Editor Web",
     icon: <Layout className="w-full h-full" />,
-    description: "Acceso a WordPress para edición web",
+    description: "Acceso a herramientas de gestión web",
     bgColor: "#FDF7FF",
-    link: "https://nuasmartrestaurant.com/wp-login.php?redirect_to=https%3A%2F%2Fnuasmartrestaurant.com%2Fwp-admin%2Fadmin.php%3Fpage%3Drtb-bookings%26status%3Dpending&reauth=1"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "WordPress",
+        link: "https://nuasmartrestaurant.com/wp-login.php?redirect_to=https%3A%2F%2Fnuasmartrestaurant.com%2Fwp-admin%2Fadmin.php%3Fpage%3Drtb-bookings%26status%3Dpending&reauth=1"
+      },
+      {
+        title: "Google Analytics",
+        link: "https://analytics.google.com/"
+      },
+      {
+        title: "Search Console",
+        link: "https://search.google.com/search-console"
+      }
+    ]
   },
   {
     title: "Reviews",
