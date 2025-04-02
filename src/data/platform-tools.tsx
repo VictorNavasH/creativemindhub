@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -65,11 +64,26 @@ export const platformTools: Tool[] = [
     ]
   },
   {
-    title: "IA Voz / Música",
+    title: "IA",
     icon: <Mic className="w-full h-full" />,
-    description: "Asistente de voz inteligente",
+    description: "Inteligencia artificial para voz, imagen y video",
     bgColor: "#E0FCFF",
-    link: "#"
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "ElevenLabs (Voz)",
+        link: "https://elevenlabs.io/"
+      },
+      {
+        title: "IA Imagen (Próximamente)",
+        link: "#"
+      },
+      {
+        title: "IA Video (Próximamente)",
+        link: "#"
+      }
+    ]
   },
   {
     title: "Creative Suite",
