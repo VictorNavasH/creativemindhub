@@ -4,7 +4,7 @@ import { marketingTools } from "./marketing-tools";
 import { analyticsTools } from "./analytics-tools";
 import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
-import { FolderArchive } from "lucide-react";
+import { FolderArchive, Cloud } from "lucide-react";
 
 // Combinamos las herramientas en el orden deseado
 export const tools: Tool[] = [
@@ -47,14 +47,13 @@ export const tools: Tool[] = [
       }
     ]
   },
-  // Cloud Storage with the correct color
+  // Completely define Cloud Storage without referencing workspaceTools[5]
   {
     title: "Cloud Storage",
-    icon: workspaceTools[5].icon,
-    description: workspaceTools[5].description,
-    bgColor: "#FFEDF5", // Must match Reservas module color
-    link: workspaceTools[5].link,
-    isFlippable: workspaceTools[5].isFlippable,
-    backOptions: workspaceTools[5].backOptions
+    icon: <Cloud className="w-full h-full" />,
+    description: "Almacenamiento y gestión de archivos",
+    bgColor: "#FFEDF5", // Match Reservas module color
+    link: "https://drive.zoho.eu/",
+    isFlippable: false
   }
 ];

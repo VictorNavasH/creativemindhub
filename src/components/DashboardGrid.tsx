@@ -14,10 +14,15 @@ const container = {
 };
 
 export const DashboardGrid = () => {
+  // Enhanced logging for debugging
   console.log("DashboardGrid rendering, tools:", tools.map(tool => ({
     title: tool.title,
     color: tool.bgColor
-  }))); 
+  })));
+  
+  // Specifically check Cloud Storage color
+  const cloudStorage = tools.find(tool => tool.title === "Cloud Storage");
+  console.log("Cloud Storage color check:", cloudStorage?.bgColor);
   
   if (!tools || tools.length === 0) {
     console.error("No tools found!");
