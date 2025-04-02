@@ -99,10 +99,21 @@ export const marketingTools: Tool[] = [
     ]
   },
   {
-    title: "Meta Business Suite",
+    title: "Acceso Cloud",
     icon: <Globe className="w-full h-full" />,
-    description: "Gestión empresarial de Meta",
-    bgColor: "#FFEDF5", // Changed from "#E5FFFB" to match the Reviews module color
-    link: "https://business.facebook.com/"
+    description: "Acceso a almacenamiento en la nube",
+    bgColor: "#FFEDF5",
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Zoho Workdrive",
+        link: "https://workdrive.zoho.eu/3bedjadf0d909664a496fb677964aea272b1b/teams/3bedjadf0d909664a496fb677964aea272b1b/ws"
+      },
+      {
+        title: "Google Drive",
+        link: "https://drive.google.com/drive/u/0/folders/0ANUAQgIMdmCSUk9PVA"
+      }
+    ]
   }
 ];
