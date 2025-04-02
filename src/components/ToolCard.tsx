@@ -10,7 +10,7 @@ interface ToolCardProps {
   onClick: () => void;
   bgColor?: string;
   link?: string;
-  // Nuevas propiedades para las opciones de la parte trasera
+  // Propiedades para las opciones de la parte trasera
   isFlippable?: boolean;
   backOptions?: {
     title: string;
@@ -31,15 +31,29 @@ export const ToolCard = ({
   const [isFlipped, setIsFlipped] = useState(false);
   
   const handleClick = () => {
-    if (isFlippable) {
-      setIsFlipped(!isFlipped);
-    } else {
+    if (!isFlippable) {
       onClick();
     }
   };
 
+  const handleMouseEnter = () => {
+    if (isFlippable) {
+      setIsFlipped(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isFlippable) {
+      setIsFlipped(false);
+    }
+  };
+
   return (
-    <div className="h-[140px] relative perspective-1000">
+    <div 
+      className="h-[140px] relative perspective-1000" 
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <motion.div
         className="w-full h-full relative preserve-3d transition-all duration-500"
         style={{ 
@@ -74,21 +88,22 @@ export const ToolCard = ({
         {/* Cara trasera */}
         {isFlippable && (
           <motion.div
-            className="rounded-xl p-4 shadow-xl transition-all duration-300 absolute w-full h-full flex flex-col justify-between items-center backdrop-blur-sm backface-hidden"
+            className="rounded-xl p-3 shadow-xl transition-all duration-300 absolute w-full h-full flex flex-col justify-between items-center backdrop-blur-sm backface-hidden"
             style={{ 
               backgroundColor: bgColor,
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden"
             }}
           >
-            <div className="w-full text-center mb-2">
-              <h3 className="text-lg font-semibold text-[#364f6b] mb-2">Selecciona una opción</h3>
-              <div className="flex flex-col gap-2">
+            <div className="w-full text-center mb-1">
+              <h3 className="text-sm font-semibold text-[#364f6b] mb-2">Selecciona una opción</h3>
+              <div className="flex flex-col gap-1.5">
                 {backOptions.map((option, index) => (
                   <Button 
                     key={index}
                     variant="outline"
-                    className="w-full bg-white/50 hover:bg-white/80 transition-colors"
+                    size="sm"
+                    className="w-full bg-white/50 hover:bg-white/80 transition-colors text-xs py-1"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(option.link, "_blank", "noopener noreferrer");
@@ -99,17 +114,9 @@ export const ToolCard = ({
                 ))}
               </div>
             </div>
-            <Button 
-              variant="ghost" 
-              size="sm"
-              className="text-[#364f6b]"
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsFlipped(false);
-              }}
-            >
-              Volver
-            </Button>
+            <div className="text-xs text-[#364f6b] opacity-70">
+              Mueve el ratón fuera para volver
+            </div>
           </motion.div>
         )}
       </motion.div>
