@@ -30,9 +30,9 @@ export const marketingTools: Tool[] = [
     ]
   },
   {
-    title: "CRM",
+    title: "Soluciones de Cliente",
     icon: <Users className="w-full h-full" />,
-    description: "Suite completa de herramientas Zoho CRM",
+    description: "Gestión integral de relaciones con clientes",
     bgColor: "#FFFAF3",
     link: "#",
     isFlippable: true,
