@@ -22,9 +22,9 @@ export const tools: Tool[] = [
   workspaceTools[2], // Google Workplace
   platformTools[1], // Herramientas Web
   platformTools[3], // IA Voz / Música
+  workspaceTools[1], // Smart Tables
   analyticsTools[2], // IA Imagen
   marketingTools[3], // IA Video
-  workspaceTools[1], // Smart Tables
   creativeTools[0], // Reservas
   marketingTools[5], // Meta Business Suite
   analyticsTools[1], // Analytics Pro
