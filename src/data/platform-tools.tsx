@@ -24,7 +24,7 @@ export const platformTools: Tool[] = [
     title: "Herramientas Web",
     icon: <Layout className="w-full h-full" />,
     description: "Acceso a herramientas de gestión web",
-    bgColor: "#FDF7FF",
+    bgColor: "#E0FCFF",
     link: "#",
     isFlippable: true,
     backOptions: [

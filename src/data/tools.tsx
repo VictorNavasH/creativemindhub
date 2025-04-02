@@ -22,13 +22,22 @@ export const tools: Tool[] = [
   workspaceTools[2], // Google Workplace
   platformTools[1], // Herramientas Web
   platformTools[3], // IA Voz / Música
-  workspaceTools[1], // Smart Tables
   {
-    // Custom resources tool replacing analyticsTools[2]
+    // Smart Tables (was workspaceTools[1])
+    title: "Smart Tables",
+    icon: workspaceTools[1].icon,
+    description: workspaceTools[1].description,
+    bgColor: "#E0FCFF", // Mismo color que IA
+    link: workspaceTools[1].link,
+    isFlippable: workspaceTools[1].isFlippable,
+    backOptions: workspaceTools[1].backOptions
+  },
+  {
+    // Custom resources tool (was analyticsTools[2])
     title: "Recursos varios",
     icon: <FolderArchive className="w-full h-full" />,
     description: "Recursos y herramientas adicionales",
-    bgColor: analyticsTools[2].bgColor,
+    bgColor: "#E0FCFF", // Mismo color que IA
     link: "#",
     isFlippable: true,
     backOptions: [
