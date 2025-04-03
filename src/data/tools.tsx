@@ -31,8 +31,14 @@ export const tools: Tool[] = [
     description: filteredMarketingTools[4].description,
     bgColor: "#E0FCFF", 
     link: filteredMarketingTools[4].link,
-    isFlippable: filteredMarketingTools[4].isFlippable,
-    backOptions: filteredMarketingTools[4].backOptions
+    isFlippable: true,
+    backOptions: [
+      ...(filteredMarketingTools[4].backOptions || []),
+      {
+        title: "Envato Elements",
+        link: "https://elements.envato.com/"
+      }
+    ]
   },
   filteredWorkspaceTools[4], // Notion
   filteredWorkspaceTools[3], // Correo Electrónico
