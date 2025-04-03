@@ -15,22 +15,33 @@ const filteredMarketingTools = marketingTools.filter(removeCloudStorage);
 const filteredWorkspaceTools = workspaceTools.filter(removeCloudStorage);
 const filteredAnalyticsTools = analyticsTools.filter(removeCloudStorage);
 
+// Filter out Envato Elements from Creative Suite if it exists (in case it's in platform-tools.tsx)
+const filteredPlatformToolsWithoutEnvato = filteredPlatformTools.map(tool => {
+  if (tool.title === "Creative Suite" && tool.backOptions) {
+    return {
+      ...tool,
+      backOptions: tool.backOptions.filter(option => option.title !== "Envato Elements")
+    };
+  }
+  return tool;
+});
+
 // Combinamos las herramientas en el orden deseado - ensuring NO Cloud Storage is in the array
 export const tools: Tool[] = [
-  filteredPlatformTools[0], // Smart Fidelity Card
+  filteredPlatformToolsWithoutEnvato[0], // Smart Fidelity Card
   filteredMarketingTools[0], // Redes Sociales
   filteredMarketingTools[1], // CRM
   filteredMarketingTools[2], // Campañas
-  filteredPlatformTools[2], // Reviews
-  filteredPlatformTools[5], // Reservas
-  filteredPlatformTools[4], // Creative Suite
+  filteredPlatformToolsWithoutEnvato[2], // Reviews
+  filteredPlatformToolsWithoutEnvato[5], // Reservas
+  filteredPlatformToolsWithoutEnvato[4], // Creative Suite
   filteredMarketingTools[4], // IA
   filteredWorkspaceTools[4], // Notion
   filteredWorkspaceTools[3], // Correo Electrónico
   filteredWorkspaceTools[0], // Projects
   filteredWorkspaceTools[2], // Google Workplace
-  filteredPlatformTools[1], // Herramientas Web
-  filteredPlatformTools[3], // IA Voz / Música
+  filteredPlatformToolsWithoutEnvato[1], // Herramientas Web
+  filteredPlatformToolsWithoutEnvato[3], // IA Voz / Música
   {
     // Smart Tables (was workspaceTools[1])
     title: "Smart Tables",
@@ -63,7 +74,14 @@ export const tools: Tool[] = [
 console.log("TOOLS ARRAY INITIALIZATION");
 console.log("Total tools:", tools.length);
 console.log("Cloud Storage has been removed");
+console.log("Envato Elements has been removed from Creative Suite");
 
 // Double-check there's no Cloud Storage in the array
 const cloudStorageCount = tools.filter(tool => tool.title === "Cloud Storage").length;
 console.log(`Found ${cloudStorageCount} Cloud Storage modules in tools array`);
+
+// Check if Envato Elements is referenced in any backOptions
+const containsEnvato = tools.some(tool => 
+  tool.backOptions && tool.backOptions.some(option => option.title === "Envato Elements")
+);
+console.log(`Contains Envato Elements references: ${containsEnvato}`);
