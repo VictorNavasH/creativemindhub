@@ -23,16 +23,16 @@ const findToolByTitle = (tools: Tool[], title: string): Tool | undefined => {
 // Definir todas las herramientas que necesitamos usando búsqueda por nombre
 const smartFidelityCard = findToolByTitle(filteredPlatformTools, "Smart Fidelity Card");
 const redesSociales = findToolByTitle(filteredMarketingTools, "Redes Sociales");
-const crm = findToolByTitle(filteredMarketingTools, "CRM");
+const crm = findToolByTitle(filteredMarketingTools, "Soluciones de Cliente");
 const campanas = findToolByTitle(filteredMarketingTools, "Campañas");
 const reviews = findToolByTitle(filteredPlatformTools, "Reviews");
 const reservas = findToolByTitle(filteredPlatformTools, "Reservas");
 const creativeSuite = findToolByTitle(filteredPlatformTools, "Creative Suite");
-const iaMarketing = findToolByTitle(filteredMarketingTools, "IA");
+const iaMarketing = findToolByTitle(filteredMarketingTools, "IA Video");
 const notion = findToolByTitle(filteredWorkspaceTools, "Notion");
 const correoElectronico = findToolByTitle(filteredWorkspaceTools, "Correo Electrónico");
 const projects = findToolByTitle(filteredWorkspaceTools, "Projects");
-const googleWorkplace = findToolByTitle(filteredWorkspaceTools, "Google Workplace");
+const googleWorkplace = findToolByTitle(filteredWorkspaceTools, "Workplace Suite");
 const herramientasWeb = findToolByTitle(filteredPlatformTools, "Herramientas Web");
 const iaPlatform = findToolByTitle(filteredPlatformTools, "IA");
 const smartTables = findToolByTitle(filteredWorkspaceTools, "Smart Tables");
