@@ -105,6 +105,10 @@ export const platformTools: Tool[] = [
       {
         title: "Envato Elements",
         link: "https://elements.envato.com/"
+      },
+      {
+        title: "Playzo",
+        link: "https://www.playzo.io/"
       }
     ]
   },
