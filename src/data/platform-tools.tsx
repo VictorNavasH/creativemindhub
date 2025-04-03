@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -64,10 +65,10 @@ export const platformTools: Tool[] = [
     ]
   },
   {
-    title: "IA",
-    icon: <Brain className="w-full h-full" />,
-    description: "Inteligencia artificial para voz, imagen y video",
-    bgColor: "#E0FCFF",
+    title: "Acceso Cloud",
+    icon: <Cloud className="w-full h-full" />,
+    description: "Inteligencia artificial generativa",
+    bgColor: "#FFEDF5",
     link: "#",
     isFlippable: true,
     backOptions: [
