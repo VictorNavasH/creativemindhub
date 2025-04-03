@@ -42,7 +42,6 @@ export const tools: Tool[] = [
   filteredWorkspaceTools[2], // Google Workplace
   filteredPlatformToolsWithoutEnvato[1], // Herramientas Web
   filteredPlatformToolsWithoutEnvato[3], // IA Voz / Música
-  filteredPlatformToolsWithoutEnvato[6], // Cloud & Templates
   {
     // Smart Tables (was workspaceTools[1])
     title: "Smart Tables",
