@@ -24,7 +24,16 @@ export const tools: Tool[] = [
   filteredPlatformTools[2], // Reviews
   filteredPlatformTools[5], // Reservas
   filteredPlatformTools[4], // Creative Suite
-  filteredMarketingTools[4], // IA
+  {
+    // IA (previously marketingTools[4])
+    title: "Asistente IA",
+    icon: filteredMarketingTools[4].icon,
+    description: filteredMarketingTools[4].description,
+    bgColor: "#E0FCFF", 
+    link: filteredMarketingTools[4].link,
+    isFlippable: filteredMarketingTools[4].isFlippable,
+    backOptions: filteredMarketingTools[4].backOptions
+  },
   filteredWorkspaceTools[4], // Notion
   filteredWorkspaceTools[3], // Correo Electrónico
   filteredWorkspaceTools[0], // Projects
