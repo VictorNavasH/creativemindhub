@@ -15,55 +15,107 @@ const filteredMarketingTools = marketingTools.filter(removeCloudStorage);
 const filteredWorkspaceTools = workspaceTools.filter(removeCloudStorage);
 const filteredAnalyticsTools = analyticsTools.filter(removeCloudStorage);
 
+// Función helper para encontrar herramientas por título
+const findToolByTitle = (tools: Tool[], title: string): Tool | undefined => {
+  return tools.find(tool => tool.title === title);
+};
+
+// Definir todas las herramientas que necesitamos usando búsqueda por nombre
+const smartFidelityCard = findToolByTitle(filteredPlatformTools, "Smart Fidelity Card");
+const redesSociales = findToolByTitle(filteredMarketingTools, "Redes Sociales");
+const crm = findToolByTitle(filteredMarketingTools, "CRM");
+const campanas = findToolByTitle(filteredMarketingTools, "Campañas");
+const reviews = findToolByTitle(filteredPlatformTools, "Reviews");
+const reservas = findToolByTitle(filteredPlatformTools, "Reservas");
+const creativeSuite = findToolByTitle(filteredPlatformTools, "Creative Suite");
+const iaMarketing = findToolByTitle(filteredMarketingTools, "IA");
+const notion = findToolByTitle(filteredWorkspaceTools, "Notion");
+const correoElectronico = findToolByTitle(filteredWorkspaceTools, "Correo Electrónico");
+const projects = findToolByTitle(filteredWorkspaceTools, "Projects");
+const googleWorkplace = findToolByTitle(filteredWorkspaceTools, "Google Workplace");
+const herramientasWeb = findToolByTitle(filteredPlatformTools, "Herramientas Web");
+const iaPlatform = findToolByTitle(filteredPlatformTools, "IA");
+const smartTables = findToolByTitle(filteredWorkspaceTools, "Smart Tables");
+const cloudTemplates = findToolByTitle(filteredPlatformTools, "Cloud & Templates");
+
+// Validar que todas las herramientas se encontraron
+const missingTools = [
+  { name: "Smart Fidelity Card", found: !!smartFidelityCard },
+  { name: "Redes Sociales", found: !!redesSociales },
+  { name: "CRM", found: !!crm },
+  { name: "Campañas", found: !!campanas },
+  { name: "Reviews", found: !!reviews },
+  { name: "Reservas", found: !!reservas },
+  { name: "Creative Suite", found: !!creativeSuite },
+  { name: "IA (Marketing)", found: !!iaMarketing },
+  { name: "Notion", found: !!notion },
+  { name: "Correo Electrónico", found: !!correoElectronico },
+  { name: "Projects", found: !!projects },
+  { name: "Google Workplace", found: !!googleWorkplace },
+  { name: "Herramientas Web", found: !!herramientasWeb },
+  { name: "IA (Platform)", found: !!iaPlatform },
+  { name: "Smart Tables", found: !!smartTables },
+  { name: "Cloud & Templates", found: !!cloudTemplates }
+].filter(item => !item.found);
+
+if (missingTools.length > 0) {
+  console.error("HERRAMIENTAS FALTANTES:", missingTools.map(t => t.name).join(", "));
+}
+
+// Crear el recurso personalizado para Smart Tables
+const customSmartTables = smartTables ? {
+  title: "Smart Tables",
+  icon: smartTables.icon,
+  description: smartTables.description,
+  bgColor: "#E0FCFF", // Mismo color que IA
+  link: smartTables.link,
+  isFlippable: smartTables.isFlippable,
+  backOptions: smartTables.backOptions
+} : undefined;
+
+// Recurso personalizado para Recursos Varios
+const recursosVarios = {
+  title: "Recursos varios",
+  icon: <FolderArchive className="w-full h-full" />,
+  description: "Recursos y herramientas adicionales",
+  bgColor: "#E0FCFF", // Mismo color que IA
+  link: "#",
+  isFlippable: true,
+  backOptions: [
+    {
+      title: "Próximamente",
+      link: "#"
+    }
+  ]
+};
+
 // Combinamos las herramientas en el orden deseado - ensuring NO Cloud Storage is in the array
-export const tools: Tool[] = [
-  filteredPlatformTools[0], // Smart Fidelity Card
-  filteredMarketingTools[0], // Redes Sociales
-  filteredMarketingTools[1], // CRM
-  filteredMarketingTools[2], // Campañas
-  filteredPlatformTools[2], // Reviews
-  filteredPlatformTools[5], // Reservas
-  filteredPlatformTools[4], // Creative Suite
-  filteredMarketingTools[4], // IA
-  filteredWorkspaceTools[4], // Notion
-  filteredWorkspaceTools[3], // Correo Electrónico
-  filteredWorkspaceTools[0], // Projects
-  filteredWorkspaceTools[2], // Google Workplace
-  filteredPlatformTools[1], // Herramientas Web
-  filteredPlatformTools[3], // IA Voz / Música
-  {
-    // Smart Tables (was workspaceTools[1])
-    title: "Smart Tables",
-    icon: filteredWorkspaceTools[1].icon,
-    description: filteredWorkspaceTools[1].description,
-    bgColor: "#E0FCFF", // Mismo color que IA
-    link: filteredWorkspaceTools[1].link,
-    isFlippable: filteredWorkspaceTools[1].isFlippable,
-    backOptions: filteredWorkspaceTools[1].backOptions
-  },
-  {
-    // Custom resources tool (was analyticsTools[2])
-    title: "Recursos varios",
-    icon: <FolderArchive className="w-full h-full" />,
-    description: "Recursos y herramientas adicionales",
-    bgColor: "#E0FCFF", // Mismo color que IA
-    link: "#",
-    isFlippable: true,
-    backOptions: [
-      {
-        title: "Próximamente",
-        link: "#"
-      }
-    ]
-  },
-  filteredPlatformTools[6], // Add Cloud & Templates module with Envato Elements
-];
+export const tools: Tool[] = [];
+
+// Añadir herramientas solo si existen
+if (smartFidelityCard) tools.push(smartFidelityCard);
+if (redesSociales) tools.push(redesSociales);
+if (crm) tools.push(crm);
+if (campanas) tools.push(campanas);
+if (reviews) tools.push(reviews);
+if (reservas) tools.push(reservas);
+if (creativeSuite) tools.push(creativeSuite);
+if (iaMarketing) tools.push(iaMarketing);
+if (notion) tools.push(notion);
+if (correoElectronico) tools.push(correoElectronico);
+if (projects) tools.push(projects);
+if (googleWorkplace) tools.push(googleWorkplace);
+if (herramientasWeb) tools.push(herramientasWeb);
+if (iaPlatform) tools.push(iaPlatform);
+if (customSmartTables) tools.push(customSmartTables);
+tools.push(recursosVarios);
+if (cloudTemplates) tools.push(cloudTemplates);
 
 // Debug log to verify
 console.log("TOOLS ARRAY INITIALIZATION");
 console.log("Total tools:", tools.length);
 console.log("Cloud Storage has been removed");
-console.log("Envato Elements has been moved from Creative Suite to Cloud & Templates");
+console.log("Envato Elements ha sido correctamente configurado solo en Cloud & Templates");
 
 // Double-check there's no Cloud Storage in the array
 const cloudStorageCount = tools.filter(tool => tool.title === "Cloud Storage").length;
@@ -83,3 +135,12 @@ const cloudTemplatesHasEnvato = tools.some(tool =>
   tool.backOptions.some(option => option.title === "Envato Elements")
 );
 console.log(`Cloud & Templates contains Envato Elements: ${cloudTemplatesHasEnvato} (should be true)`);
+
+// Log specific details about each tool for easier debugging
+console.log("--- DETALLE DE HERRAMIENTAS ---");
+tools.forEach((tool, index) => {
+  console.log(`${index + 1}. ${tool.title} - ${tool.backOptions ? tool.backOptions.length + ' opciones' : 'sin opciones'}`);
+  if (tool.backOptions) {
+    tool.backOptions.forEach(option => console.log(`   - ${option.title}`));
+  }
+});
