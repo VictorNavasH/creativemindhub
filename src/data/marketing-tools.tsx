@@ -99,7 +99,7 @@ export const marketingTools: Tool[] = [
     ]
   },
   {
-    title: "Acceso Cloud",
+    title: "Almacenamiento",
     icon: <Cloud className="w-full h-full" />,
     description: "Acceso a almacenamiento en la nube",
     bgColor: "#FFEDF5",
