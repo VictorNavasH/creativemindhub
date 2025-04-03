@@ -76,20 +76,6 @@ export const ToolCard = ({
     }
   }, [title]);
 
-  // Always include Envato Elements as an option if not already present
-  const allBackOptions = [...backOptions];
-  
-  // Check if Envato Elements option already exists
-  const hasEnvatoElements = allBackOptions.some(option => option.title === "Envato Elements");
-  
-  // Add Envato Elements if it doesn't exist
-  if (!hasEnvatoElements) {
-    allBackOptions.push({
-      title: "Envato Elements",
-      link: "https://elements.envato.com/"
-    });
-  }
-
   return (
     <div 
       className="h-[140px] relative perspective-1000" 
@@ -139,7 +125,7 @@ export const ToolCard = ({
             <div className="w-full text-center mb-0.5">
               <h3 className="text-xs font-semibold text-[#364f6b] mb-1.5">Selecciona una opción</h3>
               <div className="flex flex-col gap-1">
-                {allBackOptions.map((option, index) => (
+                {backOptions.map((option, index) => (
                   <Button 
                     key={index}
                     variant="outline"
