@@ -81,9 +81,9 @@ export const marketingTools: Tool[] = [
     link: "#"
   },
   {
-    title: "Cloud Storage",
+    title: "IA",
     icon: <Brain className="w-full h-full" />,
-    description: "Acceso a almacenamiento en la nube",
+    description: "Inteligencia artificial generativa",
     bgColor: "#E0FCFF",
     link: "#",
     isFlippable: true,

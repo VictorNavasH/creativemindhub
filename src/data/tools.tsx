@@ -19,7 +19,7 @@ const filteredAnalyticsTools = analyticsTools.filter(removeCloudStorage);
 export const tools: Tool[] = [
   filteredPlatformTools[0], // Smart Fidelity Card
   filteredMarketingTools[0], // Redes Sociales
-  filteredMarketingTools[1], // CRM
+  filteredMarketingTools[1], // Soluciones de Cliente
   filteredMarketingTools[2], // Campañas
   filteredPlatformTools[2], // Reviews
   filteredPlatformTools[5], // Reservas
@@ -28,9 +28,9 @@ export const tools: Tool[] = [
   filteredWorkspaceTools[4], // Notion
   filteredWorkspaceTools[3], // Correo Electrónico
   filteredWorkspaceTools[0], // Projects
-  filteredWorkspaceTools[2], // Google Workplace
+  filteredWorkspaceTools[2], // Workplace Suite
   filteredPlatformTools[1], // Herramientas Web
-  filteredPlatformTools[3], // IA Voz / Música
+  filteredPlatformTools[3], // IA
   {
     // Smart Tables (was workspaceTools[1])
     title: "Smart Tables",
