@@ -4,6 +4,7 @@ import { Tool } from "./tool-types";
 import {
   ShoppingCart,
   Palette,
+  Image,
   FolderOpen
 } from "lucide-react";
 
@@ -21,6 +22,13 @@ export const creativeTools: Tool[] = [
     description: "Diseño gráfico y creación de contenido",
     bgColor: "#FBEBFF",
     link: "https://www.canva.com/"
+  },
+  {
+    title: "Envato Elements",
+    icon: <Image className="w-full h-full" />,
+    description: "Recursos creativos y plantillas",
+    bgColor: "#FBEBFF",
+    link: "https://elements.envato.com/"
   },
   {
     title: "Recursos",

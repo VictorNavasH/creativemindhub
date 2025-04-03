@@ -103,8 +103,8 @@ export const platformTools: Tool[] = [
         link: "https://www.renderforest.com/"
       },
       {
-        title: "Playzo",
-        link: "https://playzo.io/create-game/"
+        title: "Envato Elements",
+        link: "https://elements.envato.com/"
       }
     ]
   },
@@ -114,19 +114,5 @@ export const platformTools: Tool[] = [
     description: "Sistema de reservas para el restaurante",
     bgColor: "#FFEDF5",
     link: "https://nuasmartrestaurant.myrestoo.net/myrestoo/beta/bookings"
-  },
-  {
-    title: "Cloud & Templates",
-    icon: <Cloud className="w-full h-full" />,
-    description: "Almacenamiento en la nube y plantillas",
-    bgColor: "#E0FCFF",
-    link: "#",
-    isFlippable: true,
-    backOptions: [
-      {
-        title: "Envato Elements",
-        link: "https://elements.envato.com/"
-      }
-    ]
   }
 ];
