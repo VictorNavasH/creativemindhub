@@ -6,47 +6,63 @@ import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
 import { FolderArchive } from "lucide-react";
 
-// Filter function to remove any Cloud Storage entries from all imported tool arrays
-const removeCloudStorage = (tool: Tool) => tool.title !== "Cloud Storage";
+// Función más segura para encontrar herramientas por título
+const findToolByTitle = (toolsArray, title) => {
+  return toolsArray.find(tool => tool.title === title);
+};
 
-// Apply the filter to all imported tool arrays to prevent duplicates
-const filteredPlatformTools = platformTools.filter(removeCloudStorage);
-const filteredMarketingTools = marketingTools.filter(removeCloudStorage);
-const filteredWorkspaceTools = workspaceTools.filter(removeCloudStorage);
-const filteredAnalyticsTools = analyticsTools.filter(removeCloudStorage);
+// Crea copias de herramientas específicas
+const getSmartFidelityCard = () => findToolByTitle(platformTools, "Smart Fidelity Card");
+const getReviews = () => findToolByTitle(platformTools, "Reviews");
+const getReservas = () => findToolByTitle(platformTools, "Reservas");
+const getCreativeSuite = () => findToolByTitle(platformTools, "Creative Suite");
+const getHerramientasWeb = () => findToolByTitle(platformTools, "Herramientas Web");
+const getIA = () => findToolByTitle(platformTools, "IA");
+const getCloudTemplates = () => findToolByTitle(platformTools, "Cloud & Templates");
 
-// Combinamos las herramientas en el orden deseado - ensuring NO Cloud Storage is in the array
+const getRedesSociales = () => findToolByTitle(marketingTools, "Redes Sociales");
+const getCRM = () => findToolByTitle(marketingTools, "CRM");
+const getCampanas = () => findToolByTitle(marketingTools, "Campañas");
+const getMarketingIA = () => findToolByTitle(marketingTools, "IA");
+
+const getProjects = () => findToolByTitle(workspaceTools, "Projects");
+const getGoogleWorkplace = () => findToolByTitle(workspaceTools, "Google Workplace");
+const getCorreoElectronico = () => findToolByTitle(workspaceTools, "Correo Electrónico");
+const getNotion = () => findToolByTitle(workspaceTools, "Notion");
+const getSmartTables = () => findToolByTitle(workspaceTools, "Smart Tables");
+
+// Combinamos las herramientas en el orden deseado usando referencias por nombre
 export const tools: Tool[] = [
-  filteredPlatformTools[0], // Smart Fidelity Card
-  filteredMarketingTools[0], // Redes Sociales
-  filteredMarketingTools[1], // CRM
-  filteredMarketingTools[2], // Campañas
-  filteredPlatformTools[2], // Reviews
-  filteredPlatformTools[5], // Reservas
-  filteredPlatformTools[4], // Creative Suite
-  filteredMarketingTools[4], // IA
-  filteredWorkspaceTools[4], // Notion
-  filteredWorkspaceTools[3], // Correo Electrónico
-  filteredWorkspaceTools[0], // Projects
-  filteredWorkspaceTools[2], // Google Workplace
-  filteredPlatformTools[1], // Herramientas Web
-  filteredPlatformTools[3], // IA Voz / Música
+  getSmartFidelityCard(),
+  getRedesSociales(),
+  getCRM(),
+  getCampanas(),
+  getReviews(),
+  getReservas(),
+  getCreativeSuite(),
+  getMarketingIA(),
+  getNotion(),
+  getCorreoElectronico(),
+  getProjects(),
+  getGoogleWorkplace(),
+  getHerramientasWeb(),
+  getIA(),
+  // Smart Tables personalizado
   {
-    // Smart Tables (was workspaceTools[1])
     title: "Smart Tables",
-    icon: filteredWorkspaceTools[1].icon,
-    description: filteredWorkspaceTools[1].description,
-    bgColor: "#E0FCFF", // Mismo color que IA
-    link: filteredWorkspaceTools[1].link,
-    isFlippable: filteredWorkspaceTools[1].isFlippable,
-    backOptions: filteredWorkspaceTools[1].backOptions
+    icon: getSmartTables() ? getSmartTables().icon : null,
+    description: getSmartTables() ? getSmartTables().description : "Herramienta para gestión de mesas",
+    bgColor: "#E0FCFF",
+    link: getSmartTables() ? getSmartTables().link : "#",
+    isFlippable: getSmartTables() ? getSmartTables().isFlippable : false,
+    backOptions: getSmartTables() ? getSmartTables().backOptions : []
   },
+  // Recursos varios
   {
-    // Custom resources tool (was analyticsTools[2])
     title: "Recursos varios",
     icon: <FolderArchive className="w-full h-full" />,
     description: "Recursos y herramientas adicionales",
-    bgColor: "#E0FCFF", // Mismo color que IA
+    bgColor: "#E0FCFF",
     link: "#",
     isFlippable: true,
     backOptions: [
@@ -55,15 +71,24 @@ export const tools: Tool[] = [
         link: "#"
       }
     ]
-  }
-  // Cloud Storage module has been removed
+  },
+  // Cloud & Templates (con Envato Elements)
+  getCloudTemplates(),
 ];
 
-// Debug log to verify
-console.log("TOOLS ARRAY INITIALIZATION");
-console.log("Total tools:", tools.length);
-console.log("Cloud Storage has been removed");
+// Verificación para asegurarse de que todo esté correcto
+console.log("Verificación de configuración de herramientas:");
 
-// Double-check there's no Cloud Storage in the array
-const cloudStorageCount = tools.filter(tool => tool.title === "Cloud Storage").length;
-console.log(`Found ${cloudStorageCount} Cloud Storage modules in tools array`);
+// Verificar Cloud & Templates
+const cloudTemplatesInTools = tools.find(tool => tool.title === "Cloud & Templates");
+const hasEnvatoInCloudTemplates = cloudTemplatesInTools && 
+                                cloudTemplatesInTools.backOptions && 
+                                cloudTemplatesInTools.backOptions.some(option => option.title === "Envato Elements");
+console.log(`✓ Cloud & Templates tiene Envato Elements: ${hasEnvatoInCloudTemplates}`);
+
+// Verificar Creative Suite
+const creativeSuiteInTools = tools.find(tool => tool.title === "Creative Suite");
+const hasEnvatoInCreativeSuite = creativeSuiteInTools && 
+                                creativeSuiteInTools.backOptions && 
+                                creativeSuiteInTools.backOptions.some(option => option.title === "Envato Elements");
+console.log(`✓ Creative Suite NO tiene Envato Elements: ${!hasEnvatoInCreativeSuite}`);
