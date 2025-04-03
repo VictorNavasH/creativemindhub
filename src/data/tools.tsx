@@ -4,7 +4,7 @@ import { marketingTools } from "./marketing-tools";
 import { analyticsTools } from "./analytics-tools";
 import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
-import { FolderArchive } from "lucide-react";
+import { FolderArchive, Cloud } from "lucide-react";
 
 // Filter function to remove any Cloud Storage entries from all imported tool arrays
 const removeCloudStorage = (tool: Tool) => tool.title !== "Cloud Storage";
@@ -27,9 +27,9 @@ export const tools: Tool[] = [
   {
     // IA (previously marketingTools[4])
     title: "Asistente IA",
-    icon: filteredMarketingTools[4].icon,
+    icon: <Cloud className="w-full h-full" />,
     description: "Acceso a recursos y almacenamiento en la nube", 
-    bgColor: "#E0FCFF", 
+    bgColor: filteredPlatformTools[2].bgColor, // Same color as Reviews 
     link: filteredMarketingTools[4].link,
     isFlippable: true,
     backOptions: [
