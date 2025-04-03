@@ -6,34 +6,26 @@ import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
 import { FolderArchive } from "lucide-react";
 
-// Función más segura para encontrar herramientas por título
+// Función segura para encontrar herramientas por título
 const findToolByTitle = (toolsArray, title) => {
   if (!toolsArray || !Array.isArray(toolsArray)) {
-    console.warn(`Array de herramientas no válido al buscar "${title}"`);
+    console.error(`toolsArray is not valid for title: ${title}`);
     return undefined;
   }
   return toolsArray.find(tool => tool && tool.title === title);
 };
 
-// Función para verificar y crear una herramienta segura
-const getSafeTool = (getterFn, defaultTitle = "Herramienta", defaultBgColor = "#E0FCFF") => {
-  const tool = getterFn();
+// Función para crear una copia segura de una herramienta
+const getSafeTool = (getter) => {
+  const tool = getter();
   if (!tool) {
-    console.warn(`No se encontró la herramienta "${defaultTitle}"`);
-    return {
-      title: defaultTitle,
-      icon: null,
-      description: "Descripción no disponible",
-      bgColor: defaultBgColor,
-      link: "#",
-      isFlippable: false,
-      backOptions: []
-    };
+    console.error(`Tool not found: ${getter.name}`);
+    return null;
   }
   return tool;
 };
 
-// Crea copias de herramientas específicas con verificación
+// Funciones para obtener herramientas específicas
 const getSmartFidelityCard = () => findToolByTitle(platformTools, "Smart Fidelity Card");
 const getReviews = () => findToolByTitle(platformTools, "Reviews");
 const getReservas = () => findToolByTitle(platformTools, "Reservas");
@@ -53,75 +45,76 @@ const getCorreoElectronico = () => findToolByTitle(workspaceTools, "Correo Elect
 const getNotion = () => findToolByTitle(workspaceTools, "Notion");
 const getSmartTables = () => findToolByTitle(workspaceTools, "Smart Tables");
 
-// Combinamos las herramientas en el orden deseado usando la función segura
-export const tools: Tool[] = [
-  getSafeTool(getSmartFidelityCard, "Smart Fidelity Card"),
-  getSafeTool(getRedesSociales, "Redes Sociales"),
-  getSafeTool(getCRM, "CRM"),
-  getSafeTool(getCampanas, "Campañas"),
-  getSafeTool(getReviews, "Reviews"),
-  getSafeTool(getReservas, "Reservas"),
-  getSafeTool(getCreativeSuite, "Creative Suite"),
-  getSafeTool(getMarketingIA, "IA Marketing"),
-  getSafeTool(getNotion, "Notion"),
-  getSafeTool(getCorreoElectronico, "Correo Electrónico"),
-  getSafeTool(getProjects, "Projects"),
-  getSafeTool(getGoogleWorkplace, "Google Workplace"),
-  getSafeTool(getHerramientasWeb, "Herramientas Web"),
-  getSafeTool(getIA, "IA"),
-  // Smart Tables personalizado
-  {
-    title: "Smart Tables",
-    icon: getSmartTables() ? getSmartTables().icon : null,
-    description: getSmartTables() ? getSmartTables().description : "Herramienta para gestión de mesas",
-    bgColor: "#E0FCFF",
-    link: getSmartTables() ? getSmartTables().link : "#",
-    isFlippable: getSmartTables() ? getSmartTables().isFlippable : false,
-    backOptions: getSmartTables() ? getSmartTables().backOptions : []
-  },
-  // Recursos varios
-  {
-    title: "Recursos varios",
-    icon: <FolderArchive className="w-full h-full" />,
-    description: "Recursos y herramientas adicionales",
-    bgColor: "#E0FCFF",
-    link: "#",
-    isFlippable: true,
-    backOptions: [
-      {
-        title: "Próximamente",
-        link: "#"
-      }
-    ]
-  },
-  // Cloud & Templates (con Envato Elements)
-  getSafeTool(getCloudTemplates, "Cloud & Templates"),
-];
+// Filtramos los valores null para evitar problemas
+const createToolsArray = () => {
+  const toolsArray = [
+    getSafeTool(getSmartFidelityCard),
+    getSafeTool(getRedesSociales),
+    getSafeTool(getCRM),
+    getSafeTool(getCampanas),
+    getSafeTool(getReviews),
+    getSafeTool(getReservas),
+    getSafeTool(getCreativeSuite),
+    getSafeTool(getMarketingIA),
+    getSafeTool(getNotion),
+    getSafeTool(getCorreoElectronico),
+    getSafeTool(getProjects),
+    getSafeTool(getGoogleWorkplace),
+    getSafeTool(getHerramientasWeb),
+    getSafeTool(getIA),
+    // Smart Tables personalizado
+    {
+      title: "Smart Tables",
+      icon: getSmartTables() ? getSmartTables().icon : null,
+      description: getSmartTables() ? getSmartTables().description : "Herramienta para gestión de mesas",
+      bgColor: "#E0FCFF",
+      link: getSmartTables() ? getSmartTables().link : "#",
+      isFlippable: getSmartTables() ? getSmartTables().isFlippable : false,
+      backOptions: getSmartTables() ? getSmartTables().backOptions : []
+    },
+    // Recursos varios
+    {
+      title: "Recursos varios",
+      icon: <FolderArchive className="w-full h-full" />,
+      description: "Recursos y herramientas adicionales",
+      bgColor: "#E0FCFF",
+      link: "#",
+      isFlippable: true,
+      backOptions: [
+        {
+          title: "Próximamente",
+          link: "#"
+        }
+      ]
+    },
+    // Cloud & Templates (con Envato Elements)
+    getSafeTool(getCloudTemplates),
+  ];
 
-// Verificación para asegurarse de que todo esté correcto de manera segura
+  // Filtrar los valores null
+  return toolsArray.filter(tool => tool !== null);
+};
+
+// Exportamos las herramientas después de aplicar el filtro
+export const tools: Tool[] = createToolsArray();
+
+// Verificación para asegurarse de que todo esté correcto
 console.log("Verificación de configuración de herramientas:");
 
-// Verificar Cloud & Templates con manejo seguro
+// Verificar Cloud & Templates
 const cloudTemplatesInTools = tools.find(tool => tool && tool.title === "Cloud & Templates");
 const hasEnvatoInCloudTemplates = cloudTemplatesInTools && 
                                 cloudTemplatesInTools.backOptions && 
-                                Array.isArray(cloudTemplatesInTools.backOptions) &&
-                                cloudTemplatesInTools.backOptions.some(option => option && option.title === "Envato Elements");
+                                cloudTemplatesInTools.backOptions.some(option => option.title === "Envato Elements");
 console.log(`✓ Cloud & Templates tiene Envato Elements: ${hasEnvatoInCloudTemplates}`);
 
-// Verificar Creative Suite con manejo seguro
+// Verificar Creative Suite
 const creativeSuiteInTools = tools.find(tool => tool && tool.title === "Creative Suite");
 const hasEnvatoInCreativeSuite = creativeSuiteInTools && 
                                 creativeSuiteInTools.backOptions && 
-                                Array.isArray(creativeSuiteInTools.backOptions) &&
-                                creativeSuiteInTools.backOptions.some(option => option && option.title === "Envato Elements");
+                                creativeSuiteInTools.backOptions.some(option => option.title === "Envato Elements");
 console.log(`✓ Creative Suite NO tiene Envato Elements: ${!hasEnvatoInCreativeSuite}`);
 
-// Verificar que todas las herramientas tienen los campos necesarios
-tools.forEach((tool, index) => {
-  if (!tool) {
-    console.warn(`Herramienta en índice ${index} es undefined o null`);
-  } else if (!tool.title) {
-    console.warn(`Herramienta en índice ${index} no tiene título`);
-  }
-});
+// Añadir log adicional para debugging
+console.log("Total tools count:", tools.length);
+console.log("Cloud Storage instances found:", tools.filter(tool => tool && tool.title === "Cloud Storage").length);
