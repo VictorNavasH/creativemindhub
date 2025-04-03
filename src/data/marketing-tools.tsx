@@ -7,7 +7,7 @@ import {
   Users,
   Video,
   Brain,
-  Globe
+  Cloud
 } from "lucide-react";
 
 export const marketingTools: Tool[] = [
@@ -100,7 +100,7 @@ export const marketingTools: Tool[] = [
   },
   {
     title: "Acceso Cloud",
-    icon: <Globe className="w-full h-full" />,
+    icon: <Cloud className="w-full h-full" />,
     description: "Acceso a almacenamiento en la nube",
     bgColor: "#FFEDF5",
     link: "#",
