@@ -65,24 +65,24 @@ export const platformTools: Tool[] = [
     ]
   },
   {
-    title: "Acceso Cloud",
-    icon: <Cloud className="w-full h-full" />,
+    title: "IA",
+    icon: <Brain className="w-full h-full" />,
     description: "Inteligencia artificial generativa",
-    bgColor: "#FFEDF5",
+    bgColor: "#E0FCFF",
     link: "#",
     isFlippable: true,
     backOptions: [
       {
-        title: "Google Drive",
-        link: "https://drive.google.com/"
+        title: "ElevenLabs (voz)",
+        link: "https://elevenlabs.io/"
       },
       {
-        title: "Zoho Work Drive",
-        link: "https://workdrive.zoho.com/"
+        title: "IA Imagen (próximamente)",
+        link: "#"
       },
       {
-        title: "Envato Elements",
-        link: "https://elements.envato.com/"
+        title: "IA Vídeo (próximamente)",
+        link: "#"
       }
     ]
   },
@@ -116,24 +116,24 @@ export const platformTools: Tool[] = [
     link: "https://nuasmartrestaurant.myrestoo.net/myrestoo/beta/bookings"
   },
   {
-    title: "IA",
-    icon: <Brain className="w-full h-full" />,
+    title: "Acceso Cloud",
+    icon: <Cloud className="w-full h-full" />,
     description: "Inteligencia artificial generativa",
-    bgColor: "#E0FCFF",
+    bgColor: "#FFEDF5",
     link: "#",
     isFlippable: true,
     backOptions: [
       {
-        title: "ElevenLabs (voz)",
-        link: "https://elevenlabs.io/"
+        title: "Google Drive",
+        link: "https://drive.google.com/"
       },
       {
-        title: "IA Imagen (próximamente)",
-        link: "#"
+        title: "Zoho Work Drive",
+        link: "https://workdrive.zoho.com/"
       },
       {
-        title: "IA Vídeo (próximamente)",
-        link: "#"
+        title: "Envato Elements",
+        link: "https://elements.envato.com/"
       }
     ]
   }
