@@ -30,7 +30,7 @@ export const marketingTools: Tool[] = [
     ]
   },
   {
-    title: "Soluciones de Cliente",
+    title: "CRM",
     icon: <Users className="w-full h-full" />,
     description: "Gestión integral de relaciones con clientes",
     bgColor: "#FFFAF3",
@@ -74,7 +74,7 @@ export const marketingTools: Tool[] = [
     ]
   },
   {
-    title: "IA Video",
+    title: "IA",
     icon: <Video className="w-full h-full" />,
     description: "Generación y edición de videos con IA",
     bgColor: "#E0FCFF",
