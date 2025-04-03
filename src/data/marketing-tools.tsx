@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -112,10 +113,6 @@ export const marketingTools: Tool[] = [
       {
         title: "Google Drive",
         link: "https://drive.google.com/drive/u/0/folders/0ANUAQgIMdmCSUk9PVA"
-      },
-      {
-        title: "Envato Elements",
-        link: "https://elements.envato.com/"
       }
     ]
   }
