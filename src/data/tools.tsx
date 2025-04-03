@@ -4,7 +4,7 @@ import { marketingTools } from "./marketing-tools";
 import { analyticsTools } from "./analytics-tools";
 import { platformTools } from "./platform-tools";
 import { workspaceTools } from "./workspace-tools";
-import { FolderArchive } from "lucide-react";
+import { FolderArchive, Cloud, Database } from "lucide-react";
 
 // Filter function to remove any Cloud Storage entries from all imported tool arrays
 const removeCloudStorage = (tool: Tool) => tool.title !== "Cloud Storage";
@@ -42,14 +42,27 @@ export const tools: Tool[] = [
     backOptions: filteredWorkspaceTools[1].backOptions
   },
   {
-    // New empty module replacing "Recursos varios"
-    title: "Módulo nuevo",
-    icon: <FolderArchive className="w-full h-full" />,
-    description: "",
+    // Cloud Storage access replacing "Módulo nuevo"
+    title: "Acceso Cloud",
+    icon: <Cloud className="w-full h-full" />,
+    description: "Almacenamiento en la nube",
     bgColor: "#E0FCFF",
     link: "#",
-    isFlippable: false,
-    backOptions: []
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "Google Drive",
+        link: "https://drive.google.com/"
+      },
+      {
+        title: "Zoho Work Drive",
+        link: "https://workdrive.zoho.com/"
+      },
+      {
+        title: "Envato Elements",
+        link: "https://elements.envato.com/"
+      }
+    ]
   }
   // Cloud Storage module has been removed
 ];
