@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -116,7 +115,7 @@ export const marketingTools: Tool[] = [
       },
       {
         title: "Envato Elements",
-        link: "https://playzo.io/create-game/"
+        link: "https://elements.envato.com/"
       }
     ]
   }
