@@ -57,8 +57,8 @@ export const tools: Tool[] = [
     backOptions: filteredWorkspaceTools[1].backOptions
   },
   {
-    // New empty module replacing "Recursos varios"
-    title: "Módulo nuevo",
+    // Updated title from "Módulo nuevo" to "Próximamente" and set to non-flippable
+    title: "Próximamente",
     icon: <FolderArchive className="w-full h-full" />,
     description: "",
     bgColor: "#E0FCFF",
