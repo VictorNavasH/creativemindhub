@@ -46,7 +46,7 @@ export const tools: Tool[] = [
     title: "Recursos varios",
     icon: <FolderArchive className="w-full h-full" />,
     description: "Recursos y herramientas adicionales",
-    bgColor: "#E0FCFF", // Mismo color que IA
+    bgColor: "#FFEDF5", // Changed to match Reviews color
     link: "#",
     isFlippable: true,
     backOptions: [
