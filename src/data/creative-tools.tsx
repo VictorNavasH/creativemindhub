@@ -28,7 +28,7 @@ export const creativeTools: Tool[] = [
     icon: <Image className="w-full h-full" />,
     description: "Recursos creativos y plantillas",
     bgColor: "#FBEBFF",
-    link: "https://playzo.io/create-game/"
+    link: "https://elements.envato.com/"
   },
   {
     title: "Recursos",
