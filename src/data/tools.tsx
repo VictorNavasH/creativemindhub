@@ -15,33 +15,22 @@ const filteredMarketingTools = marketingTools.filter(removeCloudStorage);
 const filteredWorkspaceTools = workspaceTools.filter(removeCloudStorage);
 const filteredAnalyticsTools = analyticsTools.filter(removeCloudStorage);
 
-// Filter out Envato Elements from Creative Suite if it exists (in case it's in platform-tools.tsx)
-const filteredPlatformToolsWithoutEnvato = filteredPlatformTools.map(tool => {
-  if (tool.title === "Creative Suite" && tool.backOptions) {
-    return {
-      ...tool,
-      backOptions: tool.backOptions.filter(option => option.title !== "Envato Elements")
-    };
-  }
-  return tool;
-});
-
 // Combinamos las herramientas en el orden deseado - ensuring NO Cloud Storage is in the array
 export const tools: Tool[] = [
-  filteredPlatformToolsWithoutEnvato[0], // Smart Fidelity Card
+  filteredPlatformTools[0], // Smart Fidelity Card
   filteredMarketingTools[0], // Redes Sociales
   filteredMarketingTools[1], // CRM
   filteredMarketingTools[2], // Campañas
-  filteredPlatformToolsWithoutEnvato[2], // Reviews
-  filteredPlatformToolsWithoutEnvato[5], // Reservas
-  filteredPlatformToolsWithoutEnvato[4], // Creative Suite
+  filteredPlatformTools[2], // Reviews
+  filteredPlatformTools[5], // Reservas
+  filteredPlatformTools[4], // Creative Suite
   filteredMarketingTools[4], // IA
   filteredWorkspaceTools[4], // Notion
   filteredWorkspaceTools[3], // Correo Electrónico
   filteredWorkspaceTools[0], // Projects
   filteredWorkspaceTools[2], // Google Workplace
-  filteredPlatformToolsWithoutEnvato[1], // Herramientas Web
-  filteredPlatformToolsWithoutEnvato[3], // IA Voz / Música
+  filteredPlatformTools[1], // Herramientas Web
+  filteredPlatformTools[3], // IA Voz / Música
   {
     // Smart Tables (was workspaceTools[1])
     title: "Smart Tables",
@@ -66,22 +55,31 @@ export const tools: Tool[] = [
         link: "#"
       }
     ]
-  }
-  // Cloud Storage module has been removed
+  },
+  filteredPlatformTools[6], // Add Cloud & Templates module with Envato Elements
 ];
 
 // Debug log to verify
 console.log("TOOLS ARRAY INITIALIZATION");
 console.log("Total tools:", tools.length);
 console.log("Cloud Storage has been removed");
-console.log("Envato Elements has been removed from Creative Suite");
+console.log("Envato Elements has been moved from Creative Suite to Cloud & Templates");
 
 // Double-check there's no Cloud Storage in the array
 const cloudStorageCount = tools.filter(tool => tool.title === "Cloud Storage").length;
 console.log(`Found ${cloudStorageCount} Cloud Storage modules in tools array`);
 
-// Check if Envato Elements is referenced in any backOptions
-const containsEnvato = tools.some(tool => 
-  tool.backOptions && tool.backOptions.some(option => option.title === "Envato Elements")
+// Check if Envato Elements is referenced in the right place
+const creativeSuiteHasEnvato = tools.some(tool => 
+  tool.title === "Creative Suite" && 
+  tool.backOptions && 
+  tool.backOptions.some(option => option.title === "Envato Elements")
 );
-console.log(`Contains Envato Elements references: ${containsEnvato}`);
+console.log(`Creative Suite contains Envato Elements: ${creativeSuiteHasEnvato} (should be false)`);
+
+const cloudTemplatesHasEnvato = tools.some(tool => 
+  tool.title === "Cloud & Templates" && 
+  tool.backOptions && 
+  tool.backOptions.some(option => option.title === "Envato Elements")
+);
+console.log(`Cloud & Templates contains Envato Elements: ${cloudTemplatesHasEnvato} (should be true)`);

@@ -76,22 +76,6 @@ export const ToolCard = ({
     }
   }, [title]);
 
-  // Only modify backOptions for the card with title === "Creative Suite"
-  const displayBackOptions = [...backOptions];
-  
-  if (title === "Creative Suite") {
-    // Check if Envato Elements option doesn't already exist
-    const hasEnvatoElements = displayBackOptions.some(option => option.title === "Envato Elements");
-    
-    // Add Envato Elements if it doesn't exist
-    if (!hasEnvatoElements) {
-      displayBackOptions.push({
-        title: "Envato Elements",
-        link: "https://elements.envato.com/"
-      });
-    }
-  }
-
   return (
     <div 
       className="h-[140px] relative perspective-1000" 
@@ -141,7 +125,7 @@ export const ToolCard = ({
             <div className="w-full text-center mb-0.5">
               <h3 className="text-xs font-semibold text-[#364f6b] mb-1.5">Selecciona una opción</h3>
               <div className="flex flex-col gap-1">
-                {displayBackOptions.map((option, index) => (
+                {backOptions.map((option, index) => (
                   <Button 
                     key={index}
                     variant="outline"
