@@ -73,24 +73,12 @@ export const platformTools: Tool[] = [
     isFlippable: true,
     backOptions: [
       {
-        title: "ElevenLabs (Voz)",
-        link: "https://elevenlabs.io/"
-      },
-      {
         title: "Google Drive",
         link: "https://drive.google.com/"
       },
       {
         title: "Zoho Work Drive",
         link: "https://workdrive.zoho.com/"
-      },
-      {
-        title: "IA Imagen (Próximamente)",
-        link: "#"
-      },
-      {
-        title: "IA Video (Próximamente)",
-        link: "#"
       },
       {
         title: "Envato Elements",
