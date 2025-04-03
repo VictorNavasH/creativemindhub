@@ -99,7 +99,7 @@ export const marketingTools: Tool[] = [
     ]
   },
   {
-    title: "Almacenamiento",
+    title: "Cloud & Templates",
     icon: <Cloud className="w-full h-full" />,
     description: "Acceso a almacenamiento en la nube",
     bgColor: "#FFEDF5",
@@ -113,6 +113,10 @@ export const marketingTools: Tool[] = [
       {
         title: "Google Drive",
         link: "https://drive.google.com/drive/u/0/folders/0ANUAQgIMdmCSUk9PVA"
+      },
+      {
+        title: "Envato Elements",
+        link: "https://playzo.io/create-game/"
       }
     ]
   }
