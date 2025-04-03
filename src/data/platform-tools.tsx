@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -113,5 +114,27 @@ export const platformTools: Tool[] = [
     description: "Sistema de reservas para el restaurante",
     bgColor: "#FFEDF5",
     link: "https://nuasmartrestaurant.myrestoo.net/myrestoo/beta/bookings"
+  },
+  {
+    title: "IA",
+    icon: <Brain className="w-full h-full" />,
+    description: "Inteligencia artificial generativa",
+    bgColor: "#E0FCFF",
+    link: "#",
+    isFlippable: true,
+    backOptions: [
+      {
+        title: "ElevenLabs (voz)",
+        link: "https://elevenlabs.io/"
+      },
+      {
+        title: "IA Imagen (próximamente)",
+        link: "#"
+      },
+      {
+        title: "IA Vídeo (próximamente)",
+        link: "#"
+      }
+    ]
   }
 ];
