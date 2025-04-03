@@ -25,8 +25,8 @@ export const tools: Tool[] = [
   filteredPlatformTools[5], // Reservas
   filteredPlatformTools[4], // Creative Suite
   {
-    // IA (previously marketingTools[4])
-    title: "Asistente IA",
+    // Changed name from "Asistente IA" to "Recursos Cloud"
+    title: "Recursos Cloud",
     icon: <Cloud className="w-full h-full" />,
     description: "Acceso a recursos y almacenamiento en la nube", 
     bgColor: filteredPlatformTools[2].bgColor, // Same color as Reviews 
