@@ -28,7 +28,7 @@ export const tools: Tool[] = [
     // IA (previously marketingTools[4])
     title: "Asistente IA",
     icon: filteredMarketingTools[4].icon,
-    description: filteredMarketingTools[4].description,
+    description: "Acceso a recursos y almacenamiento en la nube", 
     bgColor: "#E0FCFF", 
     link: filteredMarketingTools[4].link,
     isFlippable: true,
