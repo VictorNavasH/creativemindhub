@@ -42,19 +42,14 @@ export const tools: Tool[] = [
     backOptions: filteredWorkspaceTools[1].backOptions
   },
   {
-    // Custom resources tool (was analyticsTools[2])
-    title: "Recursos varios",
+    // New empty module replacing "Recursos varios"
+    title: "Módulo nuevo",
     icon: <FolderArchive className="w-full h-full" />,
-    description: "Recursos y herramientas adicionales",
-    bgColor: "#E0FCFF", // Changed back to original color (same as IA)
+    description: "",
+    bgColor: "#E0FCFF",
     link: "#",
-    isFlippable: true,
-    backOptions: [
-      {
-        title: "Próximamente",
-        link: "#"
-      }
-    ]
+    isFlippable: false,
+    backOptions: []
   }
   // Cloud Storage module has been removed
 ];
