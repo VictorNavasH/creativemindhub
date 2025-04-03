@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Tool } from "./tool-types";
 import {
@@ -83,6 +82,10 @@ export const platformTools: Tool[] = [
       {
         title: "IA Video (Próximamente)",
         link: "#"
+      },
+      {
+        title: "Envato Elements",
+        link: "https://elements.envato.com/"
       }
     ]
   },
